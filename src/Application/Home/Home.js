@@ -1,10 +1,29 @@
 import React, {Component} from 'react';
+import { Jumbotron } from 'reactstrap';
 
 export default class Home extends Component {
 
+  constructor(props) {
+    super(props);
+    this.renderJumbotron = this.renderJumbotron.bind(this);
+  }
+
   render() {
     return (
-      <h3>Home Page</h3>
+      <div>
+        {this.renderJumbotron()}
+      </div>
     );
   }
+
+  renderJumbotron() {
+    return (
+      <Jumbotron>
+        <h1 className="display-3">Tabularium</h1>
+        <hr className="my-2" />
+        <p className="lead">random generation for the aspiring artist, creative, or tabletop gamer </p>
+      </Jumbotron>
+    );
+  }
+
 }
