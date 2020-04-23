@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListGroup, ListGroupItem } from 'reactstrap';
+import { Button, Collapse, Nav, NavItem, NavLink } from 'reactstrap';
 import master_list from './Lists/master_list.json';
 
 export default class MainList extends Component {
@@ -9,17 +9,22 @@ export default class MainList extends Component {
     this.state ={
       category: 'Default Category',
       subcategory: 'Default Subcategory',
-      dropdownOpen: false
+      dropdownOpen: false,
+      cat_btn_open: false
     };
     this.renderList = this.renderList.bind(this);
+    this.toggleCat = this.toggleCat.bind(this);
   }
 
   render() {
     return(
       <div>
-        <ListGroup>
-          {this.renderList()}
-        </ListGroup>
+        <Button block outline onClick={this.toggleCat}>Categories</Button>
+        <Collapse isOpen={this.state.cat_btn_open}>
+          <Nav vertical>
+            {this.renderList()}
+          </Nav>
+        </Collapse>
       </div>
     );
   }
@@ -31,9 +36,12 @@ export default class MainList extends Component {
       Object.keys(mlist.master_list[i]).forEach(function(j) {
         Object.keys(mlist.master_list[i][j]).forEach(function(k) {
           if (mlist.master_list[i][j][k].header !== undefined) {
-            items.push(<ListGroupItem key={'lg_' + k + mlist.master_list[i][j][k].header}>{mlist.master_list[i][j][k].header}</ListGroupItem>)
+            items.push(
+              <NavItem key={'lg_' + k + mlist.master_list[i][j][k].header}>
+                <NavLink>{mlist.master_list[i][j][k].header}</NavLink>
+              </NavItem>)
           } else {
-            console.log(mlist.master_list[i][j][k].name);
+            // console.log(mlist.master_list[i][j][k].name);
           }
         });
       });
@@ -41,4 +49,9 @@ export default class MainList extends Component {
     return(items);
   }
 
+  toggleCat() {
+    this.setState({
+      cat_btn_open: !this.state.cat_btn_open
+    });
+  }
 }
