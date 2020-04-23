@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Jumbotron, ListGroup, ListGroupItem } from 'reactstrap';
 
 export default class Home extends Component {
@@ -14,7 +14,7 @@ export default class Home extends Component {
       <div>
         {this.renderJumbotron()}
         <div className="container">
-          <h5>Categories</h5>
+          <h4 className="text-uppercase">Categories</h4>
           {this.renderCategories()}
         </div>
       </div>
