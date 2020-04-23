@@ -21,6 +21,7 @@ export default class Generator extends Component {
       dropdownOpen: false
     };
     this.toggleDropdown = this.toggleDropdown.bind(this);
+    this.setCategory = this.setCategory.bind(this);
   }
 
   render() {
@@ -46,7 +47,7 @@ export default class Generator extends Component {
     let ttl;
     let type = 'dropitem_';
     for (ttl in titles) {
-      items.push(<DropdownItem key={type.concat(ttl)}>{titles[ttl]}</DropdownItem>);
+      items.push(<DropdownItem value={titles[ttl]} key={type.concat(ttl)} onClick={this.setCategory}>{titles[ttl]}</DropdownItem>);
     }
     return (
       <div>
@@ -67,5 +68,11 @@ export default class Generator extends Component {
      this.setState({
         dropdownOpen: !this.state.dropdownOpen
      });
+  }
+
+  setCategory(e) {
+    this.setState({
+      category: e.currentTarget.getAttribute("value")
+    });
   }
 }
