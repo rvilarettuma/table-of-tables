@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import About from './About/About';
 import Home from './Home/Home';
+import Generator from './Generator/Generator';
 
 export default class Application extends Component {
 
@@ -17,8 +18,8 @@ export default class Application extends Component {
     switch (pageToRender) {
       case 'about':
         return <About/>;
-      // case 'settings':
-      //   return <Settings/>
+      case 'generate':
+        return <Generator/>;
       default:
         return <Home/>;
     }
