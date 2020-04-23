@@ -1,0 +1,82 @@
+[
+  {"dl_list": [
+    {"header": "Dungeons and Locations"},
+    {"name": "Basic Dungeon", "description": "A basic, bare bones dungeon.", "file": "dl_basic_dungeon"},
+    {"name": "Castle", "description": "A detailed castle, with encounters.", "file": "dl_castle"},
+    {"name": "Monastery", "description": "An actively used monastery.", "file": "dl_monastery"},
+    {"name": "Prison", "description": "A basic prison complex.", "file": "dl_prison"},
+    {"name": "Basic Dungeon", "description": "An actively used temple complex.", "file": "dl_temple"}
+  ]},
+  {"fg_list": [
+    {"header": "Factions and Groups"},
+    {"name": "Acting Troupes", "description": "A band of performers and entertainers.", "file": "fg_acting_troupe"},
+    {"name": "Cults", "description": "A variety of cults, either friendly or foe.", "file": "fg_cults"},
+    {"name": "Merchant Guilds", "description": "A fleshed out guild of merchants, including related quests.", "file": "fg_merchant_guild"},
+    {"name": "Pirate Crews", "description": "A rowdy crew of pirates.", "file": "fg_pirate_crew"},
+    {"name": "Savage Hordes", "description": "A dangerous and wild clan of barbarians.", "file": "fg_savage_hordes"}
+  ]},
+  {"foo_list": [
+    {"header": "Food"},
+    {"name": "Traveller's Inn", "description": "Quick meals and menus you might find at a roadside inn, pub, or country estate.", "file": "foo_travellers_inn"},
+    {"name": "Dockside Tavern", "description": "Quick meals and menus you might find at a dockside inn, pub, or tavern.", "file": "foo_dockside"},
+    {"name": "Dwarven Alehouse", "description": "Standard Dwarven fare from any establishment that caters to Dwarves.", "file": "foo_dwarven"},
+    {"name": "Trail Rations", "description": "For determining what snacks have been sitting at the bottom of your pack for 150 miles.", "file": "foo_trail_rations"},
+    {"name": "Wines", "description": "Basically a pocket sommelier.", "file": "foo_wines"}
+  ]},
+  {"mgc_list": [
+    {"header": "Magic"},
+    {"name": "Diseases", "description": "From magical maladies to the common cold.", "file": "mgc_diseases"},
+    {"name": "Herblore", "description": "Quick and easy herbs for druids, herbalists, or healers.", "file": "mgc_herblore"},
+    {"name": "Magic Wands", "description": "Wands, staffs, rods, and orbs for the fledgling wizard.", "file": "mgc_magic_wands"},
+    {"name": "Potions", "description": "Random potions for stocking shops or treasure rooms.", "file": "mgc_potions"},
+    {"name": "Rings", "description": "Mundane or magical rings.", "file": "mgc_rings"}
+  ]},
+  {"mon_list": [
+    {"header": "Monsters"},
+    {"name": "Cultists", "description": "Zealots and fanatics for any dedicated group.", "file": "mon_cultist"},
+    {"name": "Dragons", "description": "Classic dragons and wyverns: hoard included.", "file": "mon_dragon"},
+    {"name": "Goblins", "description": "Distinctive goblins to populate your local caves.", "file": "mon_goblins"},
+    {"name": "Kobolds", "description": "Distinctive and individual kobolds on the fly.", "file": "mon_kobolds"},
+    {"name": "Trolls", "description": "A variety of trolls: bridge not included.", "file": "mon_trolls"}
+  ]},
+  {"npc_list": [
+    {"header": "NPC's"},
+    {"name": "Alchemists", "description": "An alchemist to serve as friend or foe.", "file": "npc_alchemists"},
+    {"name": "Bards", "description": "Wonderful singers and talented dancers, will likely try to seduce you.", "file": "npc_bards"},
+    {"name": "Monks", "description": "From wide-eyed pilgrims to brutal martial artists to cloistered scholars.", "file": "npc_monks"},
+    {"name": "Nobles", "description": "Lords, Earls, Dukes, and other royalty.", "file": "npc_nobles"},
+    {"name": "Villains", "description": "Purpose driven antagonists.", "file": "npc_villains"}
+  ]},
+  {"obj_list": [
+    {"header": "Objects, Items, etc."},
+    {"name": "Coins", "description": "Interesting coins to populate pockets or treasures hoards.", "file": "obj_coins"},
+    {"name": "Heirlooms", "description": "Passed down from generation to generation, right into your pockets.", "file": "obj_heirlooms"},
+    {"name": "Traps", "description": "Intricate ways to check for careless adventurers.", "file": "obj_traps"},
+    {"name": "Treasure Chests", "description": "Can also be used to make Mimics", "file": "obj_treasure_chests"},
+    {"name": "Useless Junk", "description": "It can't all be valuable, can it?.", "file": "obj_useless_junk"}
+  ]},
+  {"plo_list": [
+    {"header": "Plot"},
+    {"name": "Chaotic Cow Quests", "description": "Cow centered village quests with an interesting twist.", "file": "plow_cow_quests"},
+    {"name": "Holy Trials", "description": "A test of faith from the Gods.", "file": "plo_holy_trials"},
+    {"name": "Treasure Map", "description": "A good old fashioned treasure map.", "file": "plo_treasure_map"},
+    {"name": "Political Plots", "description": "Political intrigue for any kingdom, city, or nation.", "file": "plo_political"},
+    {"name": "Visions", "description": "A baseline for prophets and divination magic users.", "file": "plo_visions"}
+  ]},
+  {"set_list": [
+    {"header": "Settlements"},
+    {"name": "Magic Shops", "description": "Quick and easy stores for magical goods.", "file": "set_magic_store"},
+    {"name": "Military Camp", "description": "Military camps populated by interesting NPC's.", "file": "set_military_camp"},
+    {"name": "Mundane Market Stall", "description": "Mostly mundane goods sold out of a stall, cart, or small shop.", "file": "set_market_stall"},
+    {"name": "Shops", "description": "A merchant's shop and the merchant who runs it.", "file": "set_shops"},
+    {"name": "Simple Settlements", "description": "General settlements with incentives to visit them.", "file": "set_simple"}
+  ]},
+  {"wil_list": [
+    {"header": "Wilderness"},
+    {"name": "World", "description": "Unique world geography and characteristics.", "file": "wil_world"},
+    {"name": "Continent", "description": "Unique continents to populate your world.", "file": "wil_continent"},
+    {"name": "Forest", "description": "Quick flavor and encounters for forested regions.", "file": "wil_forest"},
+    {"name": "Jungle", "description": "Quick flavor and encounters for jungle regions.", "file": "wil_jungle"},
+    {"name": "Mountains", "description": "Quick flavor and encounters for mountainous regions.", "file": "wil_mountains"}
+  ]}
+]

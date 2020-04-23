@@ -1,9 +1,0 @@
-[
-  {"dl_list": [
-    {"name": "Basic Dungeon", "description": "A basic, bare bones dungeon.", "file": "dl_basic_dungeon"},
-    {"name": "Castle", "description": "A detailed castle, with encounters.", "file": "dl_castle"},
-    {"name": "Monastery", "description": "An actively used monastery.", "file": "dl_monastery"},
-    {"name": "Prison", "description": "A basic prison complex.", "file": "dl_prison"},
-    {"name": "Basic Dungeon", "description": "An actively used temple complex.", "file": "dl_temple"}
-  ]}
-]

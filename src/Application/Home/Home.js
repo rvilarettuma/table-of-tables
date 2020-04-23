@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Jumbotron, ListGroup, ListGroupItem } from 'reactstrap';
+import {CATEGORIES} from "../Constants";
 
 export default class Home extends Component {
 
@@ -43,7 +44,7 @@ export default class Home extends Component {
   }
 
   renderListItems() {
-    const titles = ['Dungeons and Locations', 'Factions/Groups', 'Food', 'Magic', 'Monsters', 'NPCs', 'Objects, Items, etc.', 'Plot', 'Settlements', 'Wilderness'];
+    const titles = {CATEGORIES}.CATEGORIES;
     let items = [];
     let ttl;
     let type = 'listitem_';

@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
-import { ListGroup } from 'reactstrap'
-import items from './Lists/dl_list'
+// import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, ListGroup, ListGroupItem } from 'reactstrap'
 
 export default class MainList extends Component {
 
   constructor(props) {
     super(props);
-    this.renderListItems = this.renderListItems.bind(this);
+    this.state ={
+      category: 'Default Category',
+      subcategory: 'Default Subcategory',
+      dropdownOpen: false
+    };
+
   }
 
   render() {
     return(
-      <ListGroup>
-        {this.renderListItems}
-      </ListGroup>
+      <div>
+        <h1>List</h1>
+      </div>
     );
   }
 

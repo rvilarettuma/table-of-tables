@@ -6,55 +6,37 @@ export default class Generator extends Component {
 
   constructor(props) {
     super(props);
-
+    this.mainList = React.createRef();
+    this.renderMain = this.renderMain.bind(this);
     this.state = {
-      category: 'Default Category',
-      subcategory: 'Default Subcategory',
-      dropdownOpen: false
+      currentCategory: "Dungeons and Locations",
+      currentSubCategory: ""
     };
-    this.toggleDropdown = this.toggleDropdown.bind(this);
-    this.setCategory = this.setCategory.bind(this);
   }
 
   render() {
     return(
+      <div>
+        {this.renderMain()}
+      </div>
+    );
+  }
+
+  renderMain() {
+    return (
       <Container>
         <Row>
           <Col xs={12} sm={12} md={3} lg={3} xl={3}>
-            {this.renderList()}
+            <MainList ref={this.mainList}/>
           </Col>
           <Col>
-              <h1 className="display-4 text-md-center">{this.state.category}</h1>
-              <hr className="my-2" />
-              <p className="text-md-center">{this.state.subcategory}</p>
+            <h1 className="display-4 text-md-center">{this.state.currentCategory}</h1>
+            <hr className="my-2" />
+            <p className="text-md-center">{this.state.currentSubCategory}</p>
           </Col>
         </Row>
       </Container>
     );
   }
 
-  renderList() {
-    // const titles = ['Dungeons and Locations', 'Factions/Groups', 'Food', 'Magic', 'Monsters', 'NPCs', 'Objects, Items, etc.', 'Plot', 'Settlements', 'Wilderness'];
-    // let items = [];
-    // let ttl;
-    // let type = 'dropitem_';
-    // for (ttl in titles) {
-    //   items.push(<DropdownItem value={titles[ttl]} key={type.concat(ttl)} onClick={this.setCategory}>{titles[ttl]}</DropdownItem>);
-    // }
-    return (
-      <MainList/>
-    );
-  }
-
-  toggleDropdown() {
-     this.setState({
-        dropdownOpen: !this.state.dropdownOpen
-     });
-  }
-
-  setCategory(e) {
-    this.setState({
-      category: e.currentTarget.getAttribute("value")
-    });
-  }
 }
