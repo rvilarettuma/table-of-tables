@@ -20,7 +20,7 @@ export default class Navigator extends Component {
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink onClick={()=>this.props.setAppPage('about')}>About</NavLink>
+                <NavLink href="#" onClick={()=>this.props.setAppPage('about')}>About</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/rvilarettuma/table-of-tables">GitHub</NavLink>
