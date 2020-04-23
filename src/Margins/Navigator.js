@@ -20,6 +20,9 @@ export default class Navigator extends Component {
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
+                <NavLink href="#" onClick={()=>this.props.setAppPage('generate')}>Generator</NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink href="#" onClick={()=>this.props.setAppPage('about')}>About</NavLink>
               </NavItem>
               <NavItem>
