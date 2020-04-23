@@ -20,8 +20,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Navigator pages={this.pages} setAppPage ={this.setAppPage}/>
-        <Application page={this.state.current_page}/>
+        <Navigator pages={this.pages} setAppPage={this.setAppPage}/>
+        <Application page={this.state.current_page} setAppPage={this.setAppPage}/>
       </div>
     );
   }
