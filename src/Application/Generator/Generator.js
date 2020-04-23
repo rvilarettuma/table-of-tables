@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
-import {
-  ButtonDropdown,
-  Container,
-  Col,
-  Row,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from 'reactstrap';
-
+import { Container, Col, Row } from 'reactstrap';
+import MainList from "./MainList";
 
 export default class Generator extends Component {
 
@@ -42,25 +34,15 @@ export default class Generator extends Component {
   }
 
   renderList() {
-    const titles = ['Dungeons and Locations', 'Factions/Groups', 'Food', 'Magic', 'Monsters', 'NPCs', 'Objects, Items, etc.', 'Plot', 'Settlements', 'Wilderness'];
-    let items = [];
-    let ttl;
-    let type = 'dropitem_';
-    for (ttl in titles) {
-      items.push(<DropdownItem value={titles[ttl]} key={type.concat(ttl)} onClick={this.setCategory}>{titles[ttl]}</DropdownItem>);
-    }
+    // const titles = ['Dungeons and Locations', 'Factions/Groups', 'Food', 'Magic', 'Monsters', 'NPCs', 'Objects, Items, etc.', 'Plot', 'Settlements', 'Wilderness'];
+    // let items = [];
+    // let ttl;
+    // let type = 'dropitem_';
+    // for (ttl in titles) {
+    //   items.push(<DropdownItem value={titles[ttl]} key={type.concat(ttl)} onClick={this.setCategory}>{titles[ttl]}</DropdownItem>);
+    // }
     return (
-      <div>
-        <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown}>
-          <DropdownToggle caret>
-            Categories
-          </DropdownToggle>
-          <DropdownMenu>
-            {items}
-          </DropdownMenu>
-        </ButtonDropdown>
-
-      </div>
+      <MainList/>
     );
   }
 
