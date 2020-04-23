@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
-import rvtImage from "./Images/rvt.png";
+import {Media } from 'reactstrap';
+import rvtImage from "./Images/rvt.gif";
 
 export default class About extends Component {
 
   render() {
     return (
-      <Card>
-        <CardBody>
-          <CardImg top width="100%" src={rvtImage} alt="Richard Vilaret-Tuma Portrait" />
-          <CardTitle tag="h3" className="text-center">Richard Vilaret-Tuma</CardTitle>
-          <CardSubtitle className="text-center">Primary Developer</CardSubtitle>
-        </CardBody>
-      </Card>
+      <div className="container-md">
+        {this.renderContainer()}
+      </div>
+    );
+  }
+
+  renderContainer() {
+    return (
+        <Media className="mt-lg-auto">
+          <Media>
+            <Media object src={rvtImage} alt="Richard Vilaret-Tuma Bitmoji Portrait"/>
+          </Media>
+          <Media body bottom>
+            <Media heading>
+              Richard Vilaret-Tuma
+            </Media>
+            <h5 className="medium"> Primary Developer</h5>
+            <p>A senior at Colorado State University, majoring in Applied Computing Technology. This project is being developed for credit for CS495 - Independent Study.</p>
+          </Media>
+        </Media>
     );
   }
 }
