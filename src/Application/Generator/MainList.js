@@ -7,9 +7,8 @@ export default class MainList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      category: 'Default Category',
-      subcategory: 'Default Subcategory',
-      dropdownOpen: false,
+      category: '',
+      subcategory: '',
       cat_btn_open: false,
       active: "default"
     };

@@ -8,10 +8,10 @@ export default class Generator extends Component {
     super(props);
 
     this.state = {
-      currentCategory: "Default Description",
-      currentSubCategory: "Default SubCategory",
-      currentDescription: "Default Description",
-      file: ""
+      currentCategory: "Dungeons and Locations",
+      currentSubCategory: "Basic Dungeon",
+      currentDescription: "A basic, bare bones dungeon.",
+      file: "dl_basic_dungeon"
     };
     this.renderMain = this.renderMain.bind(this);
     this.setName = this.setName.bind(this);

@@ -17,10 +17,11 @@ code {
   width: 100%;
 }
 
-.main {
-
-
+.pill-button {
+  border-radius: 16px;
+  padding: 20px 40px;
 }
+
 .sidebar {
   height: 100%;
   padding-bottom: 1%;

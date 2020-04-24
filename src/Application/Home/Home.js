@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { Jumbotron, ListGroup, ListGroupItem } from 'reactstrap';
-import {CATEGORIES} from "../Constants";
+import { Container, Jumbotron, Button } from 'reactstrap';
 
 export default class Home extends Component {
 
   constructor(props) {
     super(props);
     this.renderJumbotron = this.renderJumbotron.bind(this);
-    this.renderCategories = this.renderCategories.bind(this);
+    this.renderGetStarted = this.renderGetStarted.bind(this);
   }
 
   render() {
@@ -15,8 +14,7 @@ export default class Home extends Component {
       <div>
         {this.renderJumbotron()}
         <div className="container">
-          <h4 className="text-uppercase">Categories</h4>
-          {this.renderCategories()}
+
         </div>
       </div>
     );
@@ -24,35 +22,22 @@ export default class Home extends Component {
 
   renderJumbotron() {
     return (
-      <Jumbotron>
+      <Jumbotron className="text-center">
         <h1 className="display-3">Tabularium</h1>
         <hr className="my-2" />
         <p className="lead">random generation for the aspiring artist, creative, or tabletop gamer </p>
+        {this.renderGetStarted()}
       </Jumbotron>
     );
   }
 
-  renderCategories() {
-    let items =  this.renderListItems();
+  renderGetStarted() {
     return (
-      <div>
-        <ListGroup>
-          {items}
-        </ListGroup>
-      </div>
+      <Container>
+        <Button className="pill-button text-center" outline onClick={() => {this.props.setAppPage('generate')}}>Get Started</Button>
+      </Container>
     );
   }
 
-  renderListItems() {
-    const titles = {CATEGORIES}.CATEGORIES;
-    let items = [];
-    let ttl;
-    let type = 'listitem_';
-    for (ttl in titles) {
-      items.push(<ListGroupItem key={type.concat(ttl)} tag={"button"} action
-                                onClick={() => this.props.setAppPage('generate')}>{titles[ttl]}</ListGroupItem>);
-    }
-    return items;
-  }
 
 }
