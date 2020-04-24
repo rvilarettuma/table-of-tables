@@ -48,7 +48,7 @@
     "secondary": ["A secret tunnel to the outside.","The bones of a celebrated outlaw.","The preserved head of an ancient villain.","A terrible beast to which prisoners are fed.","A missing lord or lady.","A treasure stolen by a notorious prisoner.","A unique and terrible torture device.","The bones of a deposed king or queen."]
   },
   {
-    "sentence": "JAILER\\nd8 The jailer is...",
+    "sentence": "JAILER d8 The jailer is...",
     "secondary": ["A coward who likes to act tough.","A bully in every sense of the word.","A bastard son of a noble house.","A man who grew up among criminals.","A priest with a puritanical agenda.","A horrible sadist.","A mild-mannered man of faith.","A wicked little man."]
   },
   {
@@ -64,7 +64,7 @@
     "secondary": ["A large ring of keys.","A large knife and a sap.","A pale of cold porridge from the kitchens.","A trophy taken from a tortured prisoner.","A pocket-sized prayer book.","A spiked club.","A scourge or whip.","A wineskin."]
   },
   {
-    "sentence": "GUARD\\nThe guard took this job for...",
+    "sentence": "GUARD The guard took this job for...",
     "secondary": ["The steady pay.","The chance to bully others.","To prove how tough he is.","To take out his aggression on criminals."]
   },
   {
@@ -72,7 +72,7 @@
     "secondary": ["An unsightly scar.","A stupid grin.","A blank stare.","A bushy mustache."]
   },
   {
-    "sentence": "PRISONER\\nd4 The prisoner has...",
+    "sentence": "PRISONER d4 The prisoner has...",
     "secondary": ["A long scraggly beard.","A patchy beard.","Skin draped loosely over his bones.","Boils and sores on his skin."]
   },
   {
