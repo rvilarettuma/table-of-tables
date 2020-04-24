@@ -9,7 +9,8 @@ export default class App extends Component {
     this.pages = [
       { title: 'Table of Tables', page: ''},
       { title: 'About', page: 'about'},
-      { title: 'Home', page: 'home'}
+      { title: 'Home', page: 'home'},
+      { title: 'Generator', page: 'generate'}
     ];
     this.state = {
       current_page: this.pages[0].page

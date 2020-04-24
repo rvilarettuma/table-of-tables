@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar {
+  z-index: 2;
+  width: 100%;
+}
+
+.pill-button {
+  border-radius: 16px;
+  padding: 20px 40px;
+}
+
+.sidebar {
+  height: 100%;
+  padding-bottom: 1%;
+  position: fixed;
+  overflow-x: hidden;
+  z-index: 1;
+  left: 0;
+}

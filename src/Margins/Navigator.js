@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import React, {Component} from 'react';
+import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
 
 export default class Navigator extends Component {
 
@@ -13,17 +13,17 @@ export default class Navigator extends Component {
 
   render() {
     return (
-      <div>
+      <div className="navbar">
         <Navbar color="faded" light>
           <NavbarBrand href="/" className="mr-auto">home</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+          <NavbarToggler onClick={this.toggleNavbar} className="mr-2"/>
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href="#" onClick={()=>this.props.setAppPage('generate')}>Generator</NavLink>
+                <NavLink href="#" onClick={() => this.props.setAppPage('generate')}>Generator</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#" onClick={()=>this.props.setAppPage('about')}>About</NavLink>
+                <NavLink href="#" onClick={() => this.props.setAppPage('about')}>About</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/rvilarettuma/table-of-tables">GitHub</NavLink>

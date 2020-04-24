@@ -21,7 +21,7 @@ export default class Application extends Component {
       case 'generate':
         return <Generator/>;
       default:
-        return <Home setAppPage ={this.props.setAppPage}/>;
+        return <Home setAppPage={this.props.setAppPage}/>;
     }
   }
 }
