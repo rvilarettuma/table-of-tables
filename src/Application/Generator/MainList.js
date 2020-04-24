@@ -15,7 +15,7 @@ export default class MainList extends Component {
     };
     this.renderList = this.renderList.bind(this);
     this.toggleCat = this.toggleCat.bind(this);
-    this.handleNavClick = this.handleNavClick.bind(this);
+    this.setCategories = this.setCategories.bind(this);
   }
 
   render() {
@@ -32,16 +32,19 @@ export default class MainList extends Component {
     const mlist = JSON.parse(JSON.stringify({master_list}));
     let items = [];
     for (let i = 0; i < mlist.master_list.length; i++) {
-      Object.keys(mlist.master_list[i]).forEach(function (j) {
-        Object.keys(mlist.master_list[i][j]).forEach(function (k) {
+      Object.keys(mlist.master_list[i]).forEach((j) => {
+        Object.keys(mlist.master_list[i][j]).forEach((k) => {
           if (mlist.master_list[i][j][k].header !== undefined) {
             items.push(
               <ListGroupItem disabled className="text-uppercase"
                              key={'lg_' + k + mlist.master_list[i][j][k].header}>{mlist.master_list[i][j][k].header}</ListGroupItem>)
-          } else {
+          }
+          if (mlist.master_list[i][j][k].name !== undefined) {
             items.push(
-              <ListGroupItem
-                key={'lg0_' + k + mlist.master_list[i][j][k].name}>{mlist.master_list[i][j][k].name}</ListGroupItem>
+              <ListGroupItem value={mlist.master_list[i][j][k].category} tag={"button"} action onClick={(e) => {
+                this.setCategories(e)
+              }}
+                             key={'lg0_' + k + mlist.master_list[i][j][k].name}>{mlist.master_list[i][j][k].name}</ListGroupItem>
             )
           }
         });
@@ -50,8 +53,10 @@ export default class MainList extends Component {
     return (items);
   }
 
-  handleNavClick() {
-    console.log("pressed");
+  setCategories(e) {
+    let c = e.currentTarget.getAttribute("value");
+    let s = e.currentTarget.innerText;
+    this.props.setName(c, s);
   }
 
   toggleCat() {
