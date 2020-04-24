@@ -24,6 +24,7 @@ export default class About extends Component {
             </Media>
             <h5 className="medium"> Primary Developer</h5>
             <p>A senior at Colorado State University, majoring in Applied Computing Technology. This project is being developed for credit for CS495 - Independent Study.</p>
+            <p>All tables sourced with permission from user OrkishBlade on <a href="https://www.reddit.com/r/BehindTheTables/">/r/BehindTheTables</a></p>
           </Media>
         </Media>
     );
