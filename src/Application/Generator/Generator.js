@@ -22,7 +22,10 @@ export default class Generator extends Component {
   }
 
   componentDidMount() {
-    this.fetchData()
+    this.fetchData();
+  }
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return this.state.file_data !== nextState.file_data;
   }
 
   render() {
@@ -59,20 +62,24 @@ export default class Generator extends Component {
     let items = [];
     let d = this.state.file_data;
     Object.keys(d).forEach((i) => {
-      items.push(<p key={'p_' + i}>{d[i].sentence}</p>)
+      items.push(<p key={'p_' + i}>{d[i].sentence}</p>);
+      const rand = Math.floor((Math.random() * d[i].secondary.length));
+      items.push(<p className="font-weight-bolder" key={'p1_' + i }>{d[i].secondary[rand]}</p>)
     });
     return (items);
   }
 
   fetchData() {
+    console.log("fetching data...");
     fetch(`dl_tables/${this.state.file}.json`)
       .then((res) => res.json())
       .then(data => this.setState({file_data: data}))
       .catch(err => console.error(err));
+    console.log("data fetched!");
   }
 
   roll() {
-
+    this.setName(this.state.currentCategory, this.state.currentSubCategory, this.state.currentDescription, this.state.file)
   }
 
   setName(c,s,d,f) {
@@ -82,6 +89,7 @@ export default class Generator extends Component {
       currentDescription: d,
       file: f
     });
+    this.fetchData();
   }
 
 }
