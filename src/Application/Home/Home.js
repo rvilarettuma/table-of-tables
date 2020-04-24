@@ -13,9 +13,6 @@ export default class Home extends Component {
     return (
       <div>
         {this.renderJumbotron()}
-        <div className="container">
-
-        </div>
       </div>
     );
   }
