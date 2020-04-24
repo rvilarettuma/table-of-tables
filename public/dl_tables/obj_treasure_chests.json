@@ -1,0 +1,30 @@
+[
+  {
+    "sentence": "d12 The chest’s style is...",
+    "secondary": ["Crude","Standard","Fancy","Elven","Bejeweled","Draconic","Dwarven","Pretty Princess","Pirate","Woven","Creepy","Heavy Duty"]
+  },
+  {
+    "sentence": "d12 It's construction material is...",
+    "secondary": ["Old, rotting wood","Sturdy oak","Diamondwood","Iron","Steel","Bone","Obsidian","Glass","Ice","Silver","Gold","Ebony"]
+  },
+  {
+    "sentence": "d12 It has hinges and trim made from...",
+    "secondary": ["Iron","Steel","Brass","Silver","Gold","Bronze","Ebony","Leather","Wood","Mithril","Adamantite","Dragon Leather"]
+  },
+  {
+    "sentence": "d12 The chest's definitive marking is...",
+    "secondary": ["Artistic Scrollwork","Tree Pattern","Dwarven Runes","Elvish Script","Lion emblem","Carving of a Dragon","Decorative skull","Glowing Crystals","Mystic Sigils","Staring Eyes","Claw-like feet","Bas-relief of a battle"]
+  },
+  {
+    "sentence": "d12 Trap Used",
+    "secondary": ["Poison Dart","Arrow","Small explosion","Alarm","Pit trap","Boulder Trap","Heavy Blade","Spears","Water fills room","Sand fills room","Poison gas","Random Spell"]
+  },
+  {
+    "sentence": "d6 Lock type",
+    "secondary": ["Padlock","Internal mechanism","Combination","Puzzle Lock","Password","Hidden lock mechanism"]
+  },
+  {
+    "sentence": "d6 Key Location",
+    "secondary": ["Hidden in same room","Plain sight","On guardian","Another room","Held by owner","Lost"]
+  }
+]
