@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Container, Col, Row } from 'reactstrap';
+import React, {Component} from 'react';
+import {Container, Col, Row} from 'reactstrap';
 import MainList from "./MainList";
 
 export default class Generator extends Component {
@@ -9,13 +9,13 @@ export default class Generator extends Component {
 
     this.state = {
       currentCategory: "Dungeons and Locations",
-      currentSubCategory: ""
+      currentSubCategory: "Basic Dungeons"
     };
     this.renderMain = this.renderMain.bind(this);
   }
 
   render() {
-    return(
+    return (
       <div>
         {this.renderMain()}
       </div>
@@ -31,9 +31,9 @@ export default class Generator extends Component {
               <MainList/>
             </Col>
             <Col>
-              <h1 className="display-4 text-md-center">{this.state.currentCategory}</h1>
-              <hr className="my-2" />
-              <p className="text-md-center">{this.state.currentSubCategory}</p>
+              <h1 className="display-4 text-md-center">{this.state.currentSubCategory}</h1>
+              <hr className="my-2"/>
+              <p className="text-md-center">{this.state.currentCategory}</p>
             </Col>
           </Row>
         </Container>

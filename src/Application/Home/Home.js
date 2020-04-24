@@ -49,7 +49,8 @@ export default class Home extends Component {
     let ttl;
     let type = 'listitem_';
     for (ttl in titles) {
-      items.push(<ListGroupItem key={type.concat(ttl)} tag={"button"} action onClick={()=>this.props.setAppPage('generate')}>{titles[ttl]}</ListGroupItem>);
+      items.push(<ListGroupItem key={type.concat(ttl)} tag={"button"} action
+                                onClick={() => this.props.setAppPage('generate')}>{titles[ttl]}</ListGroupItem>);
     }
     return items;
   }
