@@ -9,11 +9,14 @@ export default class MainList extends Component {
     this.state = {
       category: '',
       subcategory: '',
-      cat_btn_open: false,
-      active: "default"
+      cat_btn_open: false
     };
     this.renderList = this.renderList.bind(this);
     this.setCategories = this.setCategories.bind(this);
+  }
+
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return this.state.category !== nextState.category;
   }
 
   render() {
