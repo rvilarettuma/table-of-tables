@@ -1,0 +1,78 @@
+[
+  {
+    "sentence": "d6 Hair: The troll’s hair is...",
+    "secondary": ["Long and stringy.","Wispy and thin.","Dark and matted.","A tangled mess.","Dark and curly.","Gone; the troll is bald."]
+  },
+  {
+    "sentence": "d6 Nose: The troll’s nose is...",
+    "secondary": ["Long and hooked.","Long and thin.","Bulbous.","Large and bent.","Very crooked.","Short and broad."]
+  },
+  {
+    "sentence": "d6 Wart location: The troll has a pronounced wart…",
+    "secondary": ["Below its left eye.","Above its right eye.","On the end of its nose.","On the bridge of its nose.","On its upper lip.","On its chin."]
+  },
+  {
+    "sentence": "d6 Wart appearance: The troll has a large wart that is rather...",
+    "secondary": ["Scabby.","Lumpy.","Pointy.","Hairy.","Inflamed.","Rippled."]
+  },
+  {
+    "sentence": "d6 Skill: The troll is particularly good at...",
+    "secondary": ["Biting off noses.","Tearing off limbs.","Cleaning bones.","Roasting meat.","Curing meat.","Squashing meat into jelly."]
+  },
+  {
+    "sentence": "d6 Quirk/flaw: Even for an troll, the troll frequently...",
+    "secondary": ["Gets distracted by shiny objects.","Gets distracted by food.","Is indecisive about cooking methods.","Sniffs loudly.","Picks its teeth.","Eats until it is uncomfortably full."]
+  },
+  {
+    "sentence": "d6 Possessions: The troll is carrying a/an...",
+    "secondary": ["A heavy club.","Sackful of trinkets.","Sackful of gold.","Sackful of jerky.","Sackful of bones.","Empty sack."]
+  },
+  {
+    "sentence": "d6 Favorite food: The troll is especially fond of eating…",
+    "secondary": ["Women.","Children.","Pixies.","Elves.","Mutton.","Fish."]
+  },
+  {
+    "sentence": "d6 Immediate goal: The troll is looking for a/an...",
+    "secondary": ["Easy meal.","Fatty meal.","Steady meal ticket.","Quick snack.","Big meal.","Place to rest and digest after a big meal."]
+  },
+  {
+    "sentence": "d6 Mutation: The troll has grown…",
+    "secondary": ["An extra head.","An extra nose.","An extra arm.","Long, sharp fangs.","Spikes in its back.","Long, curved claws."]
+  },
+  {
+    "sentence": "WAR TROLL d6 Past employment: Some time in the past, in exchange for food or treasure, the troll…",
+    "secondary": ["Marched to war with an orkish clan.","Guarded the treasure vault of a goblin king.","Patrolled the grounds of a witch’s hovel.","Operated a siege engine in a great army.","Barely survived an expedition that expelled a dragon.","Fought in a series of gladiatorial games."]
+  },
+  {
+    "sentence": "d6 Armor: The troll is clad in…",
+    "secondary": ["Hide armor.","Banded mail.","Chain mail.","Ring mail.","Scale mail.","Plate armor."]
+  },
+  {
+    "sentence": "d6 Weapon: The troll is wielding a/an…",
+    "secondary": ["Jagged steel greatsword.","Spiked club.","Pair of spiked gauntlets.","Enormous battleaxe.","Over-sized warhammer.","Heavy flail."]
+  },
+  {
+    "sentence": "CAVE TROLL d6 Home: The troll has found a home in or near a/an…",
+    "secondary": ["Underground lake.","Diamond mine.","Ooze colony.","Spider pit.","Forgotten tomb.","Dragon’s lair."]
+  },
+  {
+    "sentence": "d6 Least favorite food: Begrudgingly, the troll often eats…",
+    "secondary": ["Bats.","Rats.","Worms.","Snails.","Goblins.","Dwarves."]
+  },
+  {
+    "sentence": "d6 Adaptation: The troll has especially…",
+    "secondary": ["Large eyes.","Good hearing.","Pale skin.","Slimy skin.","Sharp sense of smell.","Quick reactions."]
+  },
+  {
+    "sentence": "SCRAG (AQUATIC TROLL) d6 Home: The troll has found a home in a/an…",
+    "secondary": ["Underground lake.","Muddy river.","Cool mountain lake.","Secluded cove.","Foggy marsh.","Forbidding swamp."]
+  },
+  {
+    "sentence": "d6 Least favorite food: Begrudgingly, the troll often eats…",
+    "secondary": ["Eels.","Shellfish.","Bass.","Waterfowl.","Turtles.","Frogs."]
+  },
+  {
+    "sentence": "d6 Adaptation: In addition to webbed toes, the troll has…",
+    "secondary": ["Webbed claws.","Gills.","Exceptionally large lungs.","Double-lidded eyes.","A snorkel-like nose.","Greenish-blue skin."]
+  }
+]
