@@ -14,7 +14,6 @@ export default class MainList extends Component {
       active: "default"
     };
     this.renderList = this.renderList.bind(this);
-    this.toggleCat = this.toggleCat.bind(this);
     this.setCategories = this.setCategories.bind(this);
   }
 
@@ -59,9 +58,4 @@ export default class MainList extends Component {
     this.props.setName(c, s);
   }
 
-  toggleCat() {
-    this.setState({
-      cat_btn_open: !this.state.cat_btn_open
-    });
-  }
 }
