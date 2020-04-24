@@ -1,0 +1,54 @@
+[
+  {
+    "sentence": "d6 Scale color: The dragon’s scales are mostly...",
+    "secondary": ["Black.","Gold","Dark green.","Pale green.","Red.","White."]
+  },
+  {
+    "sentence": "d6 Hide accent: The dragon has...",
+    "secondary": ["A belly and chest...","Diamond shapes on its back...","Flecks all over its hide…","A mask...","Spots on its belly and chest…","Stripes on its back…"]
+  },
+  {
+    "sentence": "d6 ...of…",
+    "secondary": ["Brown.","Crimson.","Green.","Grey.","Silver","Yellow"]
+  },
+  {
+    "sentence": "d6 Eyes: The dragon’s eyes are...",
+    "secondary": ["Mismatched colors.","Misty white.","Smoky grey.","Blood red.","Blazing gold.","Deep green."]
+  },
+  {
+    "sentence": "d6 Distinguishing feature: The dragon has a/an…",
+    "secondary": ["Pronounced underbite.","Pair of ridges above the eyes.","Frill around its neck.","Crest atop its head.","Especially long, forked tongue.","Unusually long fangs."]
+  },
+  {
+    "sentence": "d6 Scar: The dragon has…",
+    "secondary": ["A scar through one of its eyes.","Several missing toes.","A tear in one of its wings.","A long scar on its neck.","A deep scar on its side.","No noticeable scars."]
+  },
+  {
+    "sentence": "d6 Breath weapon: The dragon’s breath consists of...",
+    "secondary": ["Poisonous smoke and dim orange flames.","Black smoke and dim red flames.","A scorching line of red flame.","Punctuated blasts of yellow flame.","Billowing puffs of orange flame.","A less common form of energy (d6): 1. cone of cold air; 2. line of acid; 3. line of lightning; 4. cloud of toxic green gas; 5. Icy blast; 6. forks of lightning."]
+  },
+  {
+    "sentence": "d6 Favorite activity: The dragon is most content when it is...",
+    "secondary": ["Battling dangerous prey.","Eating.","Hunting intelligent prey.","Scavenging for shiny objects.","Sleeping.","Soaring."]
+  },
+  {
+    "sentence": "d6 Quirk/flaw: Even for a dragon, the dragon frequently...",
+    "secondary": ["Gets distracted by shiny objects.","Gets distracted by food.","Exhales flame even when it does not intend to do so.","Lets loose a terrifying cry.","Flies a little too close to the ground when on the attack.","Eats until it is uncomfortably full."]
+  },
+  {
+    "sentence": "d6 Lair: The dragon has an affinity for building its lair in...",
+    "secondary": ["Remote mountains.","Deep caverns.","Savage forests.","Ancient stone ruins.","Coastal caves.","Vast deserts."]
+  },
+  {
+    "sentence": "d6 Hoard: The dragon has a collection of...",
+    "secondary": ["Bones of great beasts it ate.","Bones of humanoids it ate.","Bones of dragons it vanquished.","Shiny objects and broken glass.","Gold and silver coins of every nation.","Sparkly gems from all over the world."]
+  },
+  {
+    "sentence": "d6 Immediate goal: The dragon is looking for a/an...",
+    "secondary": ["Easy meal.","Meal that will fight back.","Meal that will squeal.","Suitable site in which to lair.","Suitable mate.","Shiny bauble."]
+  },
+  {
+    "sentence": "d6 Past misfortune (for ancient dragons): The dragon survived a/an…",
+    "secondary": ["Attempt at being eaten by its own mother.","Period of forced servitude in an orkish army.","Period of forced servitude at the hands of a shadowwitch.","Demonic invasion.","Long imprisonment in a dark, cold place.","Near-decapitation by an elvish hero."]
+  }
+]
