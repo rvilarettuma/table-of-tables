@@ -1,0 +1,26 @@
+[
+  {
+    "sentence": "d10 The name of the shop is:",
+    "secondary": ["Old Grindylocks","Enchantments and Curses","Fidgety Sam's Fidgets","Banshees, Bassilisks, and Beholders","Hextech and other magical things","The Crawling Claw","The Fizzling Fireball","The Wild Magic Surge","Feathers of the Phoenix","Michales Magical Accessories"]
+  },
+  {
+    "sentence": "d20 The Shop Is Located:",
+    "secondary": ["Underground","In the Slums","In the market","In the tavern cellar","In the home of a spellcaster","at the docks","on a ship","Same building as the sorcerers tavern","In the arcane district","In the town square","In an alley inhabited mostly by elves","in an alley inhabited mostly by Dwarves","in an alley inhabited mostly by Gnomes","in an alley inhabited mostly by Tieflings","in an alley inhabited mostly by Goblins","In the noble district","At the entrance of the Colloseum","The shop is the wagon of a traveling merchant","On top of a mountain","at the bottom of a river"]
+  },
+  {
+    "sentence": "d10 The shop sells:",
+    "secondary": ["Trinkets and Accessories nothing of great power","Potions and poisons","Lovepotions, Viagra, and other such things","Divinations","Material components for various spells","Spellbooks and Magical Ink","Magical Weapons","Magical Armour","Scrolls","Enchanted animals"]
+  },
+  {
+    "sentence": "d10 The Shop Is Owned By:",
+    "secondary": ["And incredibly old Human","A Squirrely Gnome","A Forgetful Halfling","A Greedy and Malicious Goblin","A Rogue wizard","A Fairy","A snobby High Elf","A Wizard who is constantly experimenting","A Demon trying to make a bargain with your soul","A Warrior who knows nothing of magic, but is selling the goods he has acquired over the years"]
+  },
+  {
+    "sentence": "d10 The place looks:",
+    "secondary": ["Suspicious","Pristine","Natural","Worn down","Alive","Incredibly small on the inside compared to how it looks on the outside","Incredibly large on the inside compared to how it looks on the outside","Charred","Frozen","Gleaming"]
+  },
+  {
+    "sentence": "d10 A characteristic of the items sold here is:",
+    "secondary": ["They are all in poor shape","They have unknown effects","They are unstable, and might release magical surges on use","They are expired (for example an expired spell)","They are cursed","They are blessed","The items are all stolen","The items have great histories","The items former owner is still looking for them","The items are ancient"]
+  }
+]
