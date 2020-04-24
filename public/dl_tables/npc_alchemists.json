@@ -1,0 +1,34 @@
+[
+  {
+    "sentence": "d8 The alchemist is...",
+    "secondary": ["An apothecary.","A hedge wizard.","An herbalist.","A poisonmaker.","A potioneer.","A pyromancer.","An alchemical scholar.","An experimental alchemist."]
+  },
+  {
+    "sentence": "d6 The alchemist is looking for...",
+    "secondary": ["Delivery help.","New recipes.","A long-lost recipe for a legendary potion.","Purchasers.","Rare ingredients.","A unique ingredient."]
+  },
+  {
+    "sentence": "d8 The alchemist carries...",
+    "secondary": ["Several vials of acid.","Several curatives.","An unusual potion.","A pyrophoric substance.","Several empty glass vials.","Fine-tipped steel tweezers.","A pocket-sized field guide to (d8): 1. poisonous reptiles and amphibians; 2. arachnids, insects, and worms; 3. molds, mushrooms, and fungi; 4. aquatic plants; 5. toxic plants; 6. rare herbs and herbal remedies; 7. mineralogy; 8. soils and rocks.","A small notebook filled with recipes and notes."]
+  },
+  {
+    "sentence": "d6 The alchemist learned his/her craft from...",
+    "secondary": ["A fellow alchemist to whom he/she apprenticed.","A neighbor who was an alchemist.","A parent who was an alchemist.","A grandparent who was an alchemist.","Books of alchemical lore.","Attending an academy."]
+  },
+  {
+    "sentence": "d10 The alchemist specializes in...",
+    "secondary": ["Bombs.","Curatives.","Cursed potions.","Enchantments.","Herbalism.","Metallurgy.","Rare potions.","Poisons.","Transmutations.","Warding."]
+  },
+  {
+    "sentence": "POTION BREWING d12 The alchemist's brew is percolating in...",
+    "secondary": ["A delicate ceramic tea kettle.","A large cast iron cauldron.","A heavy-bottomed iron pot.","A thick cast iron vat.","A copper tea kettle.","A thick copper vat.","A shiny steel vat.","A blackened steel cauldron.","A thick bronze cauldron.","A glass flask with an oddly shaped neck.","A round-bottom glass flask.","A comically large glass flask."]
+  },
+  {
+    "sentence": "d20 The alchemist's cauldron currently contains...",
+    "secondary": ["Eye of newt.","Toe of frog.","Wool of bat.","Tongue of dog.","Adder's fork.","Blind-worm's sting.","Lizard's leg.","Howlet's wing.","Monkey's paw.","Pint of blood.","Pound of flesh.","Cup of mud.","Beak of duck.","Housecat's tail.","Glob of mold.","Rusty nail.","Garlic bulb.","Cob of corn.","Stirge's foot.","Dryad's thorn."]
+  },
+  {
+    "sentence": "d10 The alchemist is brewing...",
+    "secondary": ["A love potion.","A fertility tonic.","A magical cure-all.","A terrible poison.","A component for a summoning ritual.","A component for a necromantic ritual.","A component for a polymorphing hex.","A component for a beguiling charm.","A potent acid solvent.","An explosive substance."]
+  }
+]
