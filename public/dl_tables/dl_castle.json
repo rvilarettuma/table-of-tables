@@ -56,7 +56,7 @@
     "secondary": ["An armchair flanked by two sconces.","A large armoire or buffet cabinet.","A bench with a cusion.","A brazier.","A candelabrum on a large table.","A plain chair beside a window.","A heavy wooden chest.","A chest of drawers with a blanket on top.","A desk with some quills and parchment.","A fireplace with a mantle.","A fireplace with a small pile of wood.","A fresco with a padded chair beneath it.","Portrait of a noble.","A painting of a landscape or seascape.","A bust on a pedestal.","A shelf containing books or knick knacks.","A low table in front of a small sofa.","A large table beneath a chandelier.","An ornate tapestry.","A small wall basin and font."]
   },
   {
-    "sentence": "ENCOUNTERS\\n d10 Under siege: You come upon...",
+    "sentence": "ENCOUNTERS d10 Under siege: You come upon...",
     "secondary": ["A squad of archers hustling up a stair.","A patrol of guards brandishing weapons.","A guard shouting instructions.","A knight hurrying to the stables.","A servant cowering in a hiding place.","A curious child peaking out a window.","A servant kneeling in prayer.","A noble hastily penning a letter.","A squire aiding a knight with his armor.","A healer checking over his potions."]
   },
   {
