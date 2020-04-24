@@ -57,7 +57,7 @@
   ]},
   {"plo_list": [
     {"header": "Plot"},
-    {"category": "Plot", "name": "Chaotic Cow Quests", "description": "Cow centered village quests with an interesting twist.", "file": "plow_cow_quests"},
+    {"category": "Plot", "name": "Chaotic Cow Quests", "description": "Cow centered village quests with an interesting twist.", "file": "plo_cow_quests"},
     {"category": "Plot", "name": "Holy Trials", "description": "A test of faith from the Gods.", "file": "plo_holy_trials"},
     {"category": "Plot", "name": "Treasure Map", "description": "A good old fashioned treasure map.", "file": "plo_treasure_map"},
     {"category": "Plot", "name": "Political Plots", "description": "Political intrigue for any kingdom, city, or nation.", "file": "plo_political"},
