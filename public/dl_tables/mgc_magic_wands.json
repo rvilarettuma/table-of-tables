@@ -1,0 +1,22 @@
+[
+  {
+    "sentence": "d8 The wand's tip is...",
+    "secondary": ["An orb of lightning.","A shard of crystal.","A burning flame.","An orb of obsidian.","A jagged flint tip.","An orb of glass and wind.","Not there, this item is a rod with no tip.","A metal cap (d4): 1. brass; 2. copper; 3. gold; 4. iron; 5. platinum; 6. silver."]
+  },
+  {
+    "sentence": "d8 The wand's shaft is...",
+    "secondary": ["Elm, grown in moonlight.","The horn of a unicorn.","An iron bar.","Oak, strong and firm.","Stone, cool beneath your fingers.","Silver, glinting.","Adamantium.","Not there, this is an orb not a wand."]
+  },
+  {
+    "sentence": "d8 The wand is also decorated with...",
+    "secondary": ["Mystic runes, that cause pain to look upon.","Small, shining gemstones.","Intricate metal work.","A carved stone eye.","A swirling of wind that surronds the object.","An always glowing light.","Large rough-cut gemstones.","Runes that are warm to the touch."]
+  },
+  {
+    "sentence": "d6 The creator of this object was...",
+    "secondary": ["A god.","An elf.","A dwarf.","A human.","A half-elf.","A tiefling."]
+  },
+  {
+    "sentence": "d8 Who...",
+    "secondary": ["Was banished for the object's creation.","Was revered for the object's creation.","Was killed for the object's creation.","Was insane.","Went insane.","Was a beacon of goodness.","Was a force of evil.","Had no magical talent."]
+  }
+]
