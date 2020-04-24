@@ -8,8 +8,10 @@ export default class Generator extends Component {
     super(props);
 
     this.state = {
-      currentCategory: "Dungeons and Locations",
-      currentSubCategory: "Basic Dungeons"
+      currentCategory: "Default Description",
+      currentSubCategory: "Default SubCategory",
+      currentDescription: "Default Description",
+      file: ""
     };
     this.renderMain = this.renderMain.bind(this);
     this.setName = this.setName.bind(this);
@@ -33,8 +35,9 @@ export default class Generator extends Component {
             </Col>
             <Col>
               <h1 className="display-4 text-md-center">{this.state.currentSubCategory}</h1>
+              <h5 className="text-md-center">{this.state.currentCategory}</h5>
               <hr className="my-2"/>
-              <p className="text-md-center">{this.state.currentCategory}</p>
+              <p className="font-italic text-sm-center">{this.state.currentDescription}</p>
             </Col>
           </Row>
         </Container>
@@ -42,10 +45,12 @@ export default class Generator extends Component {
     );
   }
 
-  setName(c,s) {
+  setName(c,s,d,f) {
     this.setState({
       currentCategory: c,
-      currentSubCategory: s
+      currentSubCategory: s,
+      currentDescription: d,
+      file: f
     });
   }
 

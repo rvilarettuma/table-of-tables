@@ -40,7 +40,7 @@ export default class MainList extends Component {
           }
           if (mlist.master_list[i][j][k].name !== undefined) {
             items.push(
-              <ListGroupItem value={mlist.master_list[i][j][k].category} tag={"button"} action onClick={(e) => {
+              <ListGroupItem category={mlist.master_list[i][j][k].category} file={mlist.master_list[i][j][k].file} description={mlist.master_list[i][j][k].description} tag={"button"} action onClick={(e) => {
                 this.setCategories(e)
               }}
                              key={'lg0_' + k + mlist.master_list[i][j][k].name}>{mlist.master_list[i][j][k].name}</ListGroupItem>
@@ -53,9 +53,11 @@ export default class MainList extends Component {
   }
 
   setCategories(e) {
-    let c = e.currentTarget.getAttribute("value");
+    let c = e.currentTarget.getAttribute("category");
     let s = e.currentTarget.innerText;
-    this.props.setName(c, s);
+    let f = e.currentTarget.getAttribute("file");
+    let d = e.currentTarget.getAttribute("description");
+    this.props.setName(c,s,d,f);
   }
 
 }
