@@ -1,0 +1,30 @@
+[
+  {
+    "sentence": "d10 Material",
+    "secondary": ["Gold","Silver","Copper","Brass","Obsidian","Wood","Ivory","Ceramic","Bone","Carved clam/oyster shells"]
+  },
+  {
+    "sentence": "d10 Size and Shape",
+    "secondary": ["Thin coins 1 inch across","Fat Coins almost 2 inches across","Tiny Coins less than 1/2 inch across","Square Coins that don't fit a common measure","Rectangular chits 2 inches long","Fat Coins about 1 inch across","Eight sided coins 1 inch across","Round coins with a 1/2 inch hole in the center","Crescent shaped coins with dull points","Tiny coins with irregular edges"]
+  },
+  {
+    "sentence": "d10 Markings",
+    "secondary": ["A face","A flag","A geometric pattern","A slogan","A numerical value","A line for splitting","A crown","A city","A ship","A crest"]
+  },
+  {
+    "sentence": "d10 The coins value is defined as...",
+    "secondary": ["It's weight of metal","A barrel of water","One mile of tolls on the king's road","One deer hide","It's weight in gold","Two of a smaller coin","A day's wages for a soldier","A bushel of wheat","An hour of air in an underwater kingdom","A yard of common cloth"]
+  },
+  {
+    "sentence": "d10 Age",
+    "secondary": ["Newly minted","Current","Current, but out of circulation","Old","Old and corroded","Ancient","Ancient, and concreted together with other coins","Current, but from another plane","Old, and from a distant land","Ancient, and from a long forgotten empire"]
+  },
+  {
+    "sentence": "d10 The coin is valuable for other reasons because...",
+    "secondary": ["it is highly valued by collectors.","it was only minted during a short time frame.","it depicts a famous symbol.","it isn't.","it is from the reign of the last king.","it was minted by a long dead people.","it is common in the realm.","it is the only remaining trace of a lost empire.","it was minted in a distant land.","it is made from a material rare in this area."]
+  },
+  {
+    "sentence": "d10 A mixed hoard of coins contains...",
+    "secondary": ["Identical copies of the same coin, all minted in the same place.","Coins of various sizes, made of the same metal, and with similar markings, likely minted in the same place.","Coins of various shapes, made of different metals, and with similar markings, likely minted in the same place.","Mostly identical copies of the same coin with a handful of others mixed in.","Mostly coins with similar markings, with a few foreign coins mixed in.","A mixed bag of coins from all over the world.","A box of rare coins from far away along with many common coins of the realm.","A set of chits with a value in coins redeemable on their face mixed among the coins.","A pile of coins corroded over time into one large mass.","A charred bag of soot stained coins."]
+  }
+]
