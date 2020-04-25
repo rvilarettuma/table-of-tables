@@ -1,0 +1,114 @@
+[
+  {
+    "sentence": "d10 This tent is functions as...",
+    "secondary": ["Barracks.","A chapel or shrine.","A forge (d4): 1. armorer; 2. blacksmith; 3. farrier; 4. swordmaker.","An infirmary or surgeons’ office.","A mess hall.","Officers’ quarters.","Officers’ mess.","A supply tent (d4): 1. armory; 2. building materials; 3. food, 4. water.","A stable or kennel.","A workshop (d4): 1. cartwright; 2. fletcher; 3. leatherworker; 4. siege engineer."]
+  },
+  {
+    "sentence": "d12 Other Landmarks: You see...",
+    "secondary": ["A corral or wagon yard.","A guard post or watch tower.","A gatehouse.","Tables that serve as an outdoor mess hall.","A drill yard.","A target range or sparring pit.","Water wells.","A privy or waste pit.","An outdoor forge or workshop.","A stockade or jail.","Animal pens.","Graves."]
+  },
+  {
+    "sentence": "d6 The camp’s mounts include...",
+    "secondary": ["Camels.","Large draft horses.","Reliable garrons.","Quick-footed palfreys.","Huge destriers.","Exotic mounts (d6): 1. bears; 2. bison; 3. elephants; 4. elk; 5. giant lizards; 6. zebras."]
+  },
+  {
+    "sentence": "d6 As hunting or war beasts, the camp has...",
+    "secondary": ["Falcons.","Fighting dogs.","Hounds.","Terriers.","Wolves.","Exotic beasts (d10): 1. boars; 2. dire rats; 3. dire wolves; 4. drakes; 5. eagles; 6. lions; 7. owlbears; 8. ravens; 9. tigers; 10. wargs."]
+  },
+  {
+    "sentence": "d6 The camp’s general mood is...",
+    "secondary": ["Desperate; a calamity has befallen them.","Solemn; badly outnumbered, battle is nigh.","Foul; morale is bad, and provisions are low.","Tired; the journey is long and longer yet.","Eager; great plunder waits at journey’s end.","Cheerful; victory is all but certain."]
+  },
+  {
+    "sentence": " COMMANDER d6 The commander is...",
+    "secondary": ["A brilliant strategist.","A brutish thug.","A dashing swashbuckler.","A celebrated war hero.","An anointed knight.","A career soldier."]
+  },
+  {
+    "sentence": "d6 The commander is looking for...",
+    "secondary": ["Information regarding enemy positioning.","Information regarding the terrain ahead.","Reinforcements or new recruits.","News of his hometown.","Revenge against a bitter rival.","Drinking companions and storytellers."]
+  },
+  {
+    "sentence": "d4 The commander is trying to avoid...",
+    "secondary": ["Barbarians.","Bandits.","The enemy army.","Hazardous terrain."]
+  },
+  {
+    "sentence": "d6 The commander carries...",
+    "secondary": ["A superbly crafted sword.","A trusted blade and a map.","A lucky charm (rabbit’s foot, old coin).","The token of a faraway love.","A pipe and pouch of tobacco.","A little jar of mustache wax."]
+  },
+  {
+    "sentence": "SOLDIER d6 The soldier fights for...",
+    "secondary": ["The steady pay.","Pure bloodlust.","A chance to escape from life imprisonment.","A chance at vengeance.","God and country.","Fortune and glory."]
+  },
+  {
+    "sentence": "d4 On the soldier’s face is...",
+    "secondary": ["An unsightly scar.","A haughty sneer.","A look of sadness.","An eager grin."]
+  },
+  {
+    "sentence": "d4 The soldier carries…",
+    "secondary": ["A highly polished blade.","A letter from a fallen comrade.","A trophy from a fallen enemy.","A ribbon from a faraway maiden."]
+  },
+  {
+    "sentence": "SCOUT d4 The scout is...",
+    "secondary": ["A daring ranger.","A skilled hunter.","An expert tracker.","A brutal warrior."]
+  },
+  {
+    "sentence": "d4 The scout is looking to...",
+    "secondary": ["Help the camp slaughter the enemy.","Keep the camp from marching into a trap.","Hear word of enemy patrols and wild game.","Eat, drink, and be merry."]
+  },
+  {
+    "sentence": "d4 The scout carries...",
+    "secondary": ["A map with notes scrawled all over it.","A unique trinket or piece of jewelry.","A longbow and a quiver of arrows.","A large knife and climbing gear."]
+  },
+  {
+    "sentence": "ARMORER d4 The armorer is...",
+    "secondary": ["A meticulous armorsmith.","A blacksmith with some militia experience.","A farrier with little experience with weapons.","A highly-skilled weaponsmith."]
+  },
+  {
+    "sentence": "d4 The armorer is looking for...",
+    "secondary": ["A new apprentice or a journeyman assistant.","Rare metals.","Dull blades to sharpen.","A mug of strong ale."]
+  },
+  {
+    "sentence": "d4 The armorsmith carries...",
+    "secondary": ["A hammer.","A metal trinket made by the armorer.","A contract for a set of special plate armor.","Little more than a few coins."]
+  },
+  {
+    "sentence": "QUARTERMASTER d4 The quartermaster is...",
+    "secondary": ["A member of a trading clan.","A member of a prominent family.","A survivor of a terrible battle wound.","Secretly a coward."]
+  },
+  {
+    "sentence": "d4 The quartermaster seeks someone to...",
+    "secondary": ["Obtain hard-to-get provisions.","Purchase contraband items.","Help win over a sweetheart.","Share a drink and a laugh."]
+  },
+  {
+    "sentence": "d4 Currency: The quartermaster trades in...",
+    "secondary": ["Coins.","Gems and trinkets.","Meat, foraged roots, and other provisions.","Bones, scalps, teeth, or other grisly trophies."]
+  },
+  {
+    "sentence": "STABLE HAND / SQUIRE / VALET d8 The servant is...",
+    "secondary": ["A squire from a noble house.","A frightened link boy.","A long-time valet or reformed criminal.","A reformed criminal-turned valet.","A prisoner of war.","A mysterious foreigner.","A simple-minded stable hand.","An expert on horses."]
+  },
+  {
+    "sentence": "d4 The servant has...",
+    "secondary": ["An awkward gait.","Incredibly large hands.","Quite an odor.","A ragged beard."]
+  },
+  {
+    "sentence": "d6 The servant wants to...",
+    "secondary": ["Earn a little silver.","Go back home.","Show off an animal’s new trick.","Train with weapons and be a hero.","Earn the affection of his or her master.","Have a drink and a rest."]
+  },
+  {
+    "sentence": "COOK d6 The cook is looking for...",
+    "secondary": ["Someone more important to talk to.","Someone to try an improvised recipe.","Some better ingredients.","A good joke or story.","Someone with whom to share some wine.","The bottom of a bottle."]
+  },
+  {
+    "sentence": "CAMP FOLLOWER d6 The traveler is...",
+    "secondary": ["A harlot.","A healer.","A minstrel or storyteller.","A peddler.","A preacher.","A refugee."]
+  },
+  {
+    "sentence": "d4 The traveler is seeking...",
+    "secondary": ["To find a long lost friend or family member.","To escape from a troubled past.","To gain revenge against a bitter rival.","To survive the war and start over."]
+  },
+  {
+    "sentence": "d4 Tonight, the traveler is looking for...",
+    "secondary": ["A little company.","An opportunity to earn a little coin.","Someone to hear a sad tale.","Drinking companions."]
+  }
+]
