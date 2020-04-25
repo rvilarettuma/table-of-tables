@@ -1,0 +1,26 @@
+[
+  {
+    "sentence": "d6 At the center of it all is...",
+    "secondary": ["A mayor's","A king's / queen's","A prince's / princess's","A noble's","A citizen's","A guild leader's"]
+  },
+  {
+    "sentence": "d20 ...relation...",
+    "secondary": ["Self","Parent","Grandparent","Sibling","Best friend","Trusted adviser","Child","Cousin","Aunt / Uncle","Spouse","Courtesan","Personal guard","Nephew / Niece","Mistress / Lover","Rival","Handmaiden / Servant","Secret lover","Jester","Doctor","Cook"]
+  },
+  {
+    "sentence": "d20 Who is trying to...",
+    "secondary": ["Start a coup","Corrupt the leader","Frame the leader for (d4): 1. corruption; 2. inappropriate relations; 3. murder; 4. embezzlement","Control the leader from the behind the scenes","Gain more power","Gain more influence","Defect","Assassinate the leader","Assassinate a rival","Discredit the leader","Discredit a rival","Force a war to start","Commit genocide","Usurp the throne","Steal money from the people","Steal money from the kingdom","Collect personal favors","Find a position of power for all of their friends and family","Play a massive joke on the people","Ingratiate themselves with a group of powerful people"]
+  },
+  {
+    "sentence": "d10 ...who will...",
+    "secondary": ["Trade favors for sex","Trade favors for money","Trade favors for information","Trade favors for favors","Trade favors for drugs","Trade favors for influence","Only assist family","Only assist friends","Only lookout for themselves","Do anything to achieve their goal"]
+  },
+  {
+    "sentence": "d10 ...and is motivated because...",
+    "secondary": ["A family member was killed","A friend was killed","They are compelled by greed","They are compelled by power","They are being manipulated / threatened by (d6): 1. A secret society; 2. A relation (Roll again on the relation table); 3. A personal rival; 4. The leader's rival; 5. A foreign nation; 6. A fiend","A warped sense of patriotism (It's for your own good!)","They wish to regain a lost station","It's necessary for the good of the nation","They are simply bored","It is their god's will"]
+  },
+  {
+    "sentence": "d12 Your heard about this from...",
+    "secondary": ["A member of a secret society","Someone close to the leader","Someone close to the leader's relation","A secretive observer","It's common knowledge","Rumors in a tavern","A note left in the night","From the person themselves","From the victim of the plot","From whispers from the grave","From a foreign national with their own interests","From someone who's own plot is being hampered by this plot."]
+  }
+]

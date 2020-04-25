@@ -1,0 +1,26 @@
+[
+  {
+    "sentence": "d8 You've gotta help me - you see, this Cow, from",
+    "secondary": ["My Farm","My Neighbours Farm","The Wilderness","Town","The Next Village","Hell","The Abyss","My Brother's Farm"]
+  },
+  {
+    "sentence": "d10 is undertaking acts of",
+    "secondary": ["Arson","Torture","Kidnapping","Corruption in Politics","Treason","Evil Rituals","Thievery","Scheming","Raiding and Pillaging","Murder"]
+  },
+  {
+    "sentence": "d8 at",
+    "secondary": ["My Place","The Centre Of Town","The Local Tavern","The Local Church","The Neighbour's Place","The Edge of the Forest","The Cemetary/Graveyard","A nearby village"]
+  },
+  {
+    "sentence": "d8 We tried stopping this cow, but",
+    "secondary": ["It outsmarts us at every turn","Whenever we think we've cornered it, it escapes","It won the court case, and has legal immunity","It kills anyone who question it","It's protected by an impressive amount of allies","Anyone who stands up to it has a terrible curse bestowed upon them","It just keeps coming back","All of the suspects we capture are just regular cows"]
+  },
+  {
+    "sentence": "d6 Please, you must help us! I'm afraid it might",
+    "secondary": ["Breed, and over time generate a race of super cows","Scheme with the other cows in the world and incite a rebellion","Claim a right to the throne","Run in the next election","Eat me","Create a cow mafia that will revolutionize the world"]
+  },
+  {
+    "sentence": "d10 (The Cow is actually a)",
+    "secondary": ["Messiah Cow, whos existence is the omen of the end times","Druid, with their own selfish agenda","Commoner from the town who was cursed to be a cow by a Hag","New, dangerous breed of Lycanthrope - A Werecow","An ancient dragon who has been true-polymorphed by a rival","Two Goblins in a \"cow\" costume","An illusionary cow created by an Aboleth or similar evil creature","An angel, sent to perform a God's deed in secret.","An alien lifeform from a plane far, far away, who is just trying to fit in","A regular, up-to-no-good cow"]
+  }
+]

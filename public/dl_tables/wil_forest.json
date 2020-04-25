@@ -1,0 +1,50 @@
+[
+  {
+    "sentence": "d12 Interesting Location: You find...",
+    "secondary": ["A cavern behind a waterfall.","A small cave in the bank of a creek.","An entrance to a rocky cave.","A hole under a large tree.","A large burrow.","A peculiar cottage.","A woodsman's cabin.","An abandoned cabin.","An abandoned campsite.","A sacred grove.","A grave with an illegible headstone.","Ancient ruins."]
+  },
+  {
+    "sentence": "d20 Distinguishing Landmark: You see...",
+    "secondary": ["A fruit tree.","A large, hollow tree.","A pair of trees from the same root.","A tree growing over a boulder.","A clearing with wildflowers.","A grassy clearing.","A moss-covered boulder.","A thicket of brambles.","A babbling brook.","A brook in a deep ravine.","A brook, with gentle rapids.","A dry creekbed.","A small pool at a creek's bend.","A patch of mushrooms.","An enormous mushroom.","A large, hollow log.","A large, rotting log.","A tree felled by lightning.","An old gnarled tree.","The stump of an enormous tree."]
+  },
+  {
+    "sentence": "d20 Feature: You notice...",
+    "secondary": ["A flock of birds scatter.","A hawk cries.","A woodpecker drumming.","An owl hoots.","Birds chirping.","A chipmunk scurrying.","A deer dashes away.","A deer watches curiously.","A squirrel leaps from one tree to another.","A wolf howls.","Butterflies fluttering about.","Squirrels chittering.","An eerie silence.","The breeze stops.","The wind blows harder.","A twig snaps.","Brightly, colored berries.","Leaves rustling.","The scent of flowers.","The smell of decay."]
+  },
+  {
+    "sentence": "d20 Dominant Species: Many of the trees are...",
+    "secondary": ["Apple or pear trees.","Ashes.","Birches.","Beeches.","Cedars or junipers.","Cherry or plum trees.","Chestnut or hazel trees.","Cypresses.","Elms.","Firs.","Hawthorns or hemlocks.","Hickory or walnut trees.","Linden or lime trees.","Maples.","Oaks.","Pines.","Poplars.","Spruces.","Willows.","Yew or holly trees."]
+  },
+  {
+    "sentence": "d12 What’s in the cave/cavern?",
+    "secondary": ["A bear’s lair.","Lots of bats.","Many spider webs.","A troll's stash.","An ogre's lair.","Some goblins' hideout.","Some abandoned mining equipment.","Bare rock.","A potable spring.","Unidentifiable remains.","Some outlaws’ hideout.","A strange hermit."]
+  },
+  {
+    "sentence": "d20 Encounters: You come upon...",
+    "secondary": ["A large bear.","A bear cub.","A giant spider.","Several giant spiders.","A pack of wolves.","A lone wolf.","A hunting cat.","A wailing ghost.","A malevolent ghost.","A pair of goblin scouts.","A goblin patrol.","An ogre.","A pair of outlaws.","A beggarly bandit.","An old witch.","A curious herbalist.","A lost child.","A woodcutter busy with the day’s work.","An intrepid hunter.","An elvish ranger."]
+  },
+  {
+    "sentence": "d6 Who lives in the peculiar cottage?",
+    "secondary": ["A lonely old woman.","A reclusive shapeshifter.","An eccentric healer.","A beautiful witch.","A horrible witch.","An outcast dwarf."]
+  },
+  {
+    "sentence": "d6 Who lived in the abandoned cabin?",
+    "secondary": ["A lonely old woman.","A reclusive scholar.","an eccentric healer.","A poor woodcutter.","A fur trader.","A dwarf prospector."]
+  },
+  {
+    "sentence": "d6 Who resides in the abandoned cabin now?",
+    "secondary": ["An owlbear.","An ogre.","A troll.","A mad witch.","A paranoid shapeshifter.","Restless ghosts."]
+  },
+  {
+    "sentence": "d10 Who built the ancient ruins?",
+    "secondary": ["Dwarvish miners.","A wood elf king.","A high elf prince.","A dragon cult.","A death cult.","Shadow monks.","A long-dead emperor.","A forgotten king.","An evil queen.","A dark sorcerer."]
+  },
+  {
+    "sentence": "d10 Who lives in the ancient ruins now?",
+    "secondary": ["A dwarf prospector.","A wood elf druid.","Poisonous snakes.","Giant spiders.","Hungry zombies.","Restless ghosts.","A handful of ogres.","Some irritable trolls.","A pair of manticores.","A dragon."]
+  },
+  {
+    "sentence": "d6 What’s in the hole/burrow?",
+    "secondary": ["A snake.","A spider.","A badger.","Earthworms.","A centipede.","Unusual fungus."]
+  }
+]
