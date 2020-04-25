@@ -15,7 +15,6 @@ export default class Generator extends Component {
       file_data: []
     };
     this.renderMain = this.renderMain.bind(this);
-    this.renderContent = this.renderContent.bind(this);
     this.fetchData = this.fetchData.bind(this);
     this.setName = this.setName.bind(this);
     this.roll = this.roll.bind(this);
@@ -37,6 +36,13 @@ export default class Generator extends Component {
   }
 
   renderMain() {
+    let items = [];
+    let d = this.state.file_data;
+    Object.keys(d).forEach((i) => {
+      items.push(<p key={'p_' + i}>{d[i].sentence}</p>);
+      const rand = Math.floor((Math.random() * d[i].secondary.length));
+      items.push(<p className="font-weight-bolder" key={'p1_' + i }>{d[i].secondary[rand]}</p>)
+    });
     return (
       <div>
         <Container>
@@ -49,8 +55,9 @@ export default class Generator extends Component {
                 <h5 className="text-md-center">{this.state.currentCategory}</h5>
                 <hr className="my-2"/>
                 <p className="font-italic text-sm-center">{this.state.currentDescription}</p>
-                {this.renderContent()}
                 <Button block outline onClick={this.roll}>Roll</Button>
+                <br/>
+                {items}
               </Col>
           </Row>
         </Container>
@@ -58,24 +65,11 @@ export default class Generator extends Component {
     );
   }
 
-  renderContent() {
-    let items = [];
-    let d = this.state.file_data;
-    Object.keys(d).forEach((i) => {
-      items.push(<p key={'p_' + i}>{d[i].sentence}</p>);
-      const rand = Math.floor((Math.random() * d[i].secondary.length));
-      items.push(<p className="font-weight-bolder" key={'p1_' + i }>{d[i].secondary[rand]}</p>)
-    });
-    return (items);
-  }
-
   fetchData() {
-    console.log("fetching data...");
     fetch(`dl_tables/${this.state.file}.json`)
       .then((res) => res.json())
       .then(data => this.setState({file_data: data}))
       .catch(err => console.error(err));
-    console.log("data fetched!");
   }
 
   roll() {
