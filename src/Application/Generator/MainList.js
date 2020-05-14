@@ -37,7 +37,7 @@ export default class MainList extends Component {
         Object.keys(mlist.master_list[i][j]).forEach((k) => {
           if (mlist.master_list[i][j][k].header !== undefined) {
             items.push(
-              <ListGroupItem disabled className="text-uppercase"
+              <ListGroupItem disabled className="text-uppercase generatorTitle"
                              key={'lg_' + k + mlist.master_list[i][j][k].header}>{mlist.master_list[i][j][k].header}</ListGroupItem>)
           }
           if (mlist.master_list[i][j][k].name !== undefined) {
