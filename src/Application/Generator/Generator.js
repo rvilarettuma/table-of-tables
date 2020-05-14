@@ -80,8 +80,7 @@ export default class Generator extends Component {
       currentSubCategory: s,
       currentDescription: d,
       file: f
-    });
-    this.fetchData();
+    }, () => { this.fetchData() });
   }
 
 }

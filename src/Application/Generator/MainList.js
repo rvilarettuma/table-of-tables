@@ -7,8 +7,6 @@ export default class MainList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      category: '',
-      subcategory: '',
       cat_btn_open: false
     };
     this.renderList = this.renderList.bind(this);
