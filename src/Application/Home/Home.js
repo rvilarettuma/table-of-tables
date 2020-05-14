@@ -11,7 +11,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className={"main-page"}>
         {this.renderJumbotron()}
       </div>
     );
@@ -19,11 +19,12 @@ export default class Home extends Component {
 
   renderJumbotron() {
     return (
-      <Jumbotron className="text-center">
-        <h1 className="display-3">Tabularium</h1>
-        <hr className="my-2" />
-        <p className="lead">random generation for the aspiring artist, creative, or tabletop gamer </p>
-        {this.renderGetStarted()}
+      <Jumbotron fluid className={"jumbo"} >
+        <Container>
+          <h1 className="display-3">Tabularium</h1>
+          <p className="lead">random generation for the aspiring artist, creative, or tabletop gamer </p>
+          {this.renderGetStarted()}
+        </Container>
       </Jumbotron>
     );
   }
@@ -31,7 +32,7 @@ export default class Home extends Component {
   renderGetStarted() {
     return (
       <Container>
-        <Button className="pill-button text-center" outline onClick={() => {this.props.setAppPage('generate')}}>Get Started</Button>
+        <Button className="pill-button text-center" outline onClick={() => {this.props.setAppPage('generate')}}>get started</Button>
       </Container>
     );
   }

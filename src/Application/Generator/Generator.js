@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Container, Col, Row} from 'reactstrap';
+import {Button, Col, Row} from 'reactstrap';
 import MainList from "./MainList";
 
 export default class Generator extends Component {
@@ -29,7 +29,7 @@ export default class Generator extends Component {
 
   render() {
     return (
-      <div>
+      <div className={"generator"}>
         {this.renderMain()}
       </div>
     );
@@ -45,22 +45,20 @@ export default class Generator extends Component {
     });
     return (
       <div>
-        <Container>
           <Row>
-            <Col>
+            <Col xs={2} sm={2} md={2} lg={2} xl={2}>
               <MainList setName={this.setName}/>
             </Col>
-              <Col>
-                <h1 className="display-4 text-md-center">{this.state.currentSubCategory}</h1>
-                <h5 className="text-md-center">{this.state.currentCategory}</h5>
-                <hr className="my-2"/>
+              <Col xs={10} sm={10} md={10} lg={10} xl={10}>
+                <h1 className="display-4 text-md-center generatorTitle">{this.state.currentSubCategory}</h1>
+                <h5 className="text-md-center generatorSubTitle">{this.state.currentCategory}</h5>
+                <hr className="my-2 generatorDesc"/>
                 <p className="font-italic text-sm-center">{this.state.currentDescription}</p>
                 <Button block outline onClick={this.roll}>Roll</Button>
                 <br/>
                 {items}
               </Col>
           </Row>
-        </Container>
       </div>
     );
   }

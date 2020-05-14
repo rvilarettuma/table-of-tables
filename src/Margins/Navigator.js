@@ -14,7 +14,7 @@ export default class Navigator extends Component {
   render() {
     return (
       <div className="navbar">
-        <Navbar color="faded" light>
+        <Navbar light>
           <NavbarBrand href="/" className="mr-auto">home</NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2"/>
           <Collapse isOpen={!this.state.collapsed} navbar>

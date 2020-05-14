@@ -5,6 +5,37 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk-Bold';
+  src: local('SpaceGrotesk'), url("./fonts/SpaceGrotesk-Bold.woff") format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk-Light';
+  src: local('SpaceGrotesk'), url("./fonts/SpaceGrotesk-Light.woff") format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk-Medium';
+  src: local('SpaceGrotesk'), url("./fonts/SpaceGrotesk-Medium.woff") format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: local('SpaceGrotesk'), url("./fonts/SpaceGrotesk-Regular.woff") format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk-SemiBold';
+  src: local('SpaceGrotesk'), url("./fonts/SpaceGrotesk-SemiBold.woff") format('woff');
+  font-weight: bold;
 }
 
 code {
@@ -15,18 +46,40 @@ code {
 .navbar {
   z-index: 2;
   width: 100%;
+  font-family: SpaceGrotesk-Bold, sans-serif;
 }
 
 .pill-button {
   border-radius: 16px;
   padding: 20px 40px;
+  font-family: SpaceGrotesk-Light, sans-serif;
+}
+.jumbo h1 {
+  font-family: 'SpaceGrotesk-Bold', sans-serif;
+}
+
+.jumbo p {
+  font-family: 'SpaceGrotesk-Light', sans-serif;
 }
 
 .sidebar {
   height: 100%;
-  padding-bottom: 1%;
-  position: fixed;
-  overflow-x: hidden;
-  z-index: 1;
-  left: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.generator {
+  font-family: SpaceGrotesk, sans-serif;
+}
+
+.generatorTitle {
+  font-family: SpaceGrotesk-Bold, sans-serif;
+}
+
+.generatorSubTitle {
+  font-family: SpaceGrotesk-SemiBold, sans-serif;
+}
+
+.generatorDesc {
+  font-family: SpaceGrotesk-Light, sans-serif;
 }
