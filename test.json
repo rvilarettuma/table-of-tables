@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "category": "Test Category",
+    "name": "Test Name",
+    "description": "This is a description for the Test Name table",
+    "file": "test_file"
+  },
+  "content": [
+    {
+      "prompt": "This is the first prompt.",
+      "response": [
+        "Option 1",
+        "Option 2",
+        "Option 3",
+        "Option 4",
+        "Option 5",
+        "Option 6"
+      ]
+    },
+    {
+      "prompt": "This is the second prompt. It has a nested roll.",
+      "response": [
+        {
+          "Option 1": [
+            "Sub1",
+            "Sub2",
+            "Sub3",
+            "Sub4"
+          ]
+        },
+        {
+          "Option 2": [
+            "Sub1",
+            "Sub2",
+            "Sub3",
+            "Sub4"
+          ]
+        },
+        {
+          "Option 3": [
+            "Sub1",
+            "Sub2",
+            "Sub3",
+            "Sub4"
+          ]
+        },
+        {
+          "Option 4": [
+            "Sub1",
+            "Sub2",
+            "Sub3",
+            "Sub4"
+          ]
+        }
+      ]
+    }
+  ]
+}
