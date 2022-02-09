@@ -25,6 +25,7 @@ function getJsonContent() {
     // Get Prompt
     let prompt = content.prompt
     console.log(`Prompt ${c}: ${prompt}`)
+    componentArray.push(<p key={c + "promptKey"}>{prompt}</p>)
     // Get Reponse
     let response = content.response
     console.log(`Response ${c}: ${response}`)
@@ -32,10 +33,13 @@ function getJsonContent() {
     
     if (response[r].primary === undefined) {
       console.log(`Rolled String: ${response[r]}`)
+      componentArray.push(<p key={c + "responseKey"}>{response[r]}</p>)
     } else {
       console.log(`Rolled Object: ${response[r]}`)
       console.log(`Primary: ${response[r].primary}`)
+      componentArray.push(<p key={c + "responseKeyPrimary"}>{response[r].primary}</p>)
       console.log(`Primary: ${response[r].secondary[roll(response[r].secondary.length - 1)]}`)
+      componentArray.push(<p key={c + "responseKeySecondary"}>{response[r].secondary[roll(response[r].secondary.length - 1)]}</p>)
     }
     
   }
