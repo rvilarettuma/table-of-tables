@@ -1,3 +1,4 @@
+import React from 'react';
 import testTable from './test.json'
 
 function TestRoller() {
