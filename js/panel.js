@@ -44,6 +44,18 @@ document.addEventListener('input', e => {
   if (e.target.id === 'p-title' && !filenameManuallyEdited) {
     document.getElementById('p-filename').value = slugify(e.target.value.trim());
   }
+  if (e.target.id === 'table-search') {
+    renderTableList();
+  }
+  if (e.target.id === 'p-filename') {
+    filenameManuallyEdited = true;
+  }
+});
+
+document.addEventListener('change', e => {
+  if (e.target.id === 'table-import') {
+    onFilesPicked(e.target);
+  }
 });
 
 document.addEventListener('click', e => {
@@ -76,6 +88,9 @@ document.addEventListener('click', e => {
       sidebarState.sortDirection = sidebarState.sortDirection === 'asc' ? 'desc' : 'asc';
       renderTableList();
       break;
+    case 'toggle-sidebar':
+      toggleSidebar();
+      break;
     case 'toggle-category': {
       const category = decodeURIComponent(actionEl.dataset.category || '');
       const key = category || 'Uncategorized';
@@ -83,39 +98,59 @@ document.addEventListener('click', e => {
       renderTableList();
       break;
     }
+    case 'new-table':
+      panelNew();
+      break;
+    case 'switch-tab':
+      switchTab(actionEl.dataset.tab || 'roll');
+      break;
+    case 'roll-table':
+      roll();
+      break;
+    case 'focus-tag-input':
+      document.getElementById('tag-input')?.focus();
+      break;
+    case 'add-item-card':
+      addItemCard('p-items');
+      break;
+    case 'save-panel':
+      panelSave();
+      break;
+    case 'export-panel':
+      panelExport();
+      break;
+    case 'import-from-edit':
+      importFromEditPane();
+      break;
+    case 'clear-import-text':
+      document.getElementById('json-import-text').value = '';
+      break;
+    case 'toggle-theme':
+      toggleTheme();
+      break;
+    case 'open-settings':
+      openSettings();
+      break;
+    case 'close-settings':
+      closeSettings();
+      break;
   }
 });
 
 // ── Form read/write ───────────────────────────────────────────────────────
 
 function _readPanel(commit = true) {
-  if (commit) _commitTagInput();
-  return {
-    title:       document.getElementById('p-title').value.trim() || 'Untitled',
-    description: document.getElementById('p-desc').value.trim(),
-    category:    document.getElementById('p-category').value.trim(),
-    tags:        _getTags(),
-    items:       readItems('p-items'),
-  };
+  return readFormState(commit);
 }
 
 function _readFilename() {
-  const raw = document.getElementById('p-filename').value.trim();
-  // Ensure it always ends with .json
-  if (!raw) return slugify(document.getElementById('p-title').value.trim() || 'untitled');
+  const raw = (getUiRef('p-filename')?.value || '').trim();
+  if (!raw) return slugify((getUiRef('p-title')?.value || '').trim() || 'untitled');
   return raw.endsWith('.json') ? raw : raw + '.json';
 }
 
 function _clearPanel() {
-  document.getElementById('p-title').value    = '';
-  document.getElementById('p-desc').value     = '';
-  document.getElementById('p-category').value = '';
-  document.getElementById('p-filename').value = '';
-  filenameManuallyEdited = false;
-  _setTags([]);
-  document.getElementById('tag-input').value = '';
-  document.getElementById('p-items').innerHTML = '';
-  document.getElementById('panel-status').className = 'status';
+  clearFormState();
 }
 
 // ── Panel actions ─────────────────────────────────────────────────────────
@@ -123,7 +158,8 @@ function _clearPanel() {
 function panelNew() {
   setCurrentTable(null);
   renderTableList();
-  document.getElementById('panel-heading').textContent = 'New Table';
+  const heading = getUiRef('panel-heading');
+  if (heading) heading.textContent = 'New Table';
   _clearPanel();
   _refreshPreview();
   switchTab('edit');
@@ -132,18 +168,22 @@ function panelNew() {
 function panelLoad(id) {
   const entry = state.tables.find(t => t.id === id);
   if (!entry) return;
-  document.getElementById('panel-heading').textContent = 'Edit table';
-  document.getElementById('p-title').value    = entry.data.title;
-  document.getElementById('p-desc').value     = entry.data.description || '';
-  document.getElementById('p-category').value = entry.data.category || '';
-  document.getElementById('p-filename').value = entry.filename;
-  filenameManuallyEdited = true; // treat loaded filename as intentional
-  _setTags(entry.data.tags || []);
-  document.getElementById('tag-input').value = '';
-  const container = document.getElementById('p-items');
-  container.innerHTML = '';
-  entry.data.items.forEach(item => addItemCard('p-items', item));
-  document.getElementById('panel-status').className = 'status';
+
+  const heading = getUiRef('panel-heading');
+  if (heading) heading.textContent = 'Edit table';
+
+  hydrateFormState({
+    title: entry.data.title,
+    description: entry.data.description || '',
+    category: entry.data.category || '',
+    filename: entry.filename,
+    tags: entry.data.tags || [],
+    items: entry.data.items || [],
+  });
+
+  filenameManuallyEdited = true;
+  const status = getUiRef('panel-status');
+  if (status) status.className = 'status';
   _refreshPreview();
 }
 
@@ -193,6 +233,23 @@ function _tableCategoryName(table) {
 
 function _tableSortValue(table) {
   return (table?.data?.title || '').trim().toLowerCase();
+}
+
+function toggleSidebar() {
+  if (window.innerWidth > 960) return;
+  const layout = document.getElementById('layout');
+  if (!layout) return;
+
+  state.sidebarCollapsed = !state.sidebarCollapsed;
+  layout.classList.toggle('sidebar-collapsed', state.sidebarCollapsed);
+
+  const button = document.querySelector('[data-action="toggle-sidebar"]');
+  if (!button) return;
+  const path = button.querySelector('path');
+  if (path) {
+    path.setAttribute('d', 'M4 7h16M4 12h16M4 17h16');
+  }
+  button.setAttribute('aria-label', state.sidebarCollapsed ? 'Expand tables sidebar' : 'Collapse tables sidebar');
 }
 
 function renderTableList() {
@@ -310,18 +367,15 @@ function importFromEditPane() {
   const err = validateSchema(parsed);
   if (err) { showStatus(st, 'err', err); return; }
 
-  // Populate form fields without touching session state
-  document.getElementById('p-title').value = parsed.title || '';
-  document.getElementById('p-desc').value  = parsed.description || '';
-  document.getElementById('p-category').value = parsed.category || '';
-  _setTags(parsed.tags || []);
-  document.getElementById('tag-input').value = '';
-  const container = document.getElementById('p-items');
-  container.innerHTML = '';
-  parsed.items.forEach(item => addItemCard('p-items', item));
+  hydrateFormState({
+    title: parsed.title || '',
+    description: parsed.description || '',
+    category: parsed.category || '',
+    filename: slugify(parsed.title || 'untitled'),
+    tags: parsed.tags || [],
+    items: parsed.items || [],
+  });
 
-  // Auto-fill filename from parsed title (user can override)
-  document.getElementById('p-filename').value = slugify(parsed.title || 'untitled');
   filenameManuallyEdited = false;
   showStatus(st, 'ok', 'Loaded. Review and hit Save to keep it.');
   document.getElementById('json-import-text').value = '';

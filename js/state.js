@@ -1,10 +1,104 @@
 // Session state
+const STATUS_TIMEOUT_MS = 4000;
+
 const state = {
   tables: [],
   currentTableId: null,
   statusTimers: {},
   settingsOpen: false,
+  sidebarCollapsed: false,
 };
+
+function getUiRef(id) {
+  return document.getElementById(id);
+}
+
+function isMobileViewport() {
+  return window.innerWidth <= 960;
+}
+
+function readFormState(commit = true) {
+  const refs = {
+    title: getUiRef('p-title'),
+    desc: getUiRef('p-desc'),
+    category: getUiRef('p-category'),
+    filename: getUiRef('p-filename'),
+    tags: getUiRef('tag-chips'),
+    tagInput: getUiRef('tag-input'),
+    items: getUiRef('p-items'),
+  };
+
+  if (commit && typeof _commitTagInput === 'function') _commitTagInput();
+
+  return {
+    title: (refs.title?.value || '').trim() || 'Untitled',
+    description: (refs.desc?.value || '').trim(),
+    category: (refs.category?.value || '').trim(),
+    tags: Array.from(refs.tags?.querySelectorAll('.tag-chip') || []).map(el => el.dataset.tag).filter(Boolean),
+    items: typeof readItems === 'function' ? readItems('p-items') : [],
+  };
+}
+
+function hydrateFormState(data = {}) {
+  const refs = {
+    title: getUiRef('p-title'),
+    desc: getUiRef('p-desc'),
+    category: getUiRef('p-category'),
+    filename: getUiRef('p-filename'),
+    tags: getUiRef('tag-chips'),
+    tagInput: getUiRef('tag-input'),
+    items: getUiRef('p-items'),
+    heading: getUiRef('panel-heading'),
+  };
+
+  if (refs.heading) refs.heading.textContent = 'Edit table';
+  if (refs.title) refs.title.value = data.title || '';
+  if (refs.desc) refs.desc.value = data.description || '';
+  if (refs.category) refs.category.value = data.category || '';
+  if (refs.filename) refs.filename.value = data.filename || '';
+  if (refs.tagInput) refs.tagInput.value = '';
+
+  if (refs.tags) {
+    refs.tags.innerHTML = '';
+    if (typeof _setTags === 'function') _setTags(data.tags || []);
+  }
+
+  if (refs.items) {
+    refs.items.innerHTML = '';
+    (data.items || []).forEach(item => {
+      if (typeof addItemCard === 'function') addItemCard('p-items', item);
+    });
+  }
+
+  if (typeof filenameManuallyEdited !== 'undefined') {
+    filenameManuallyEdited = !!filenameManuallyEdited;
+  } else {
+    filenameManuallyEdited = false;
+  }
+}
+
+function clearFormState() {
+  const refs = {
+    title: getUiRef('p-title'),
+    desc: getUiRef('p-desc'),
+    category: getUiRef('p-category'),
+    filename: getUiRef('p-filename'),
+    tags: getUiRef('tag-chips'),
+    tagInput: getUiRef('tag-input'),
+    items: getUiRef('p-items'),
+    status: getUiRef('panel-status'),
+  };
+
+  if (refs.title) refs.title.value = '';
+  if (refs.desc) refs.desc.value = '';
+  if (refs.category) refs.category.value = '';
+  if (refs.filename) refs.filename.value = '';
+  if (refs.tags) refs.tags.innerHTML = '';
+  if (refs.tagInput) refs.tagInput.value = '';
+  if (refs.items) refs.items.innerHTML = '';
+  if (refs.status) refs.status.className = 'status';
+  filenameManuallyEdited = false;
+}
 
 function renderSettingsPage() {
   const settingsPage = document.getElementById('settings-page');
@@ -105,9 +199,15 @@ function showStatus(elId, type, msg) {
   if (state.statusTimers[elId]) clearTimeout(state.statusTimers[elId]);
 
   el.className = 'status ' + type;
+  el.classList.remove('status-animating');
+  el.style.setProperty('--status-duration', `${STATUS_TIMEOUT_MS}ms`);
+  void el.offsetWidth;
+  el.classList.add('status-animating');
   el.textContent = msg;
+
   state.statusTimers[elId] = setTimeout(() => {
     el.className = 'status';
+    el.classList.remove('status-animating');
     delete state.statusTimers[elId];
-  }, 4000);
+  }, STATUS_TIMEOUT_MS);
 }

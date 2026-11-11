@@ -12,10 +12,17 @@
 </head>
 <body>
 <header id="topbar">
-  <span id="app-title">Tabularium</span>
+  <div class="topbar-left">
+    <button type="button" class="icon-button mobile-sidebar-toggle" data-action="toggle-sidebar" aria-label="Toggle tables sidebar">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </svg>
+    </button>
+    <span id="app-title">Tabularium</span>
+  </div>
   <div>
-    <button id="theme-toggle" type="button" onclick="toggleTheme()" title="Toggle dark / light" aria-label="Toggle dark mode"></button>
-    <button type="button" onclick="openSettings()">Settings</button>
+    <button id="theme-toggle" type="button" data-action="toggle-theme" title="Toggle dark / light" aria-label="Toggle dark mode"></button>
+    <button type="button" data-action="open-settings">Settings</button>
   </div>
 </header>
 
@@ -26,7 +33,7 @@
         <p class="eyebrow">Preferences</p>
         <h2 id="settings-title">Settings</h2>
       </div>
-      <button class="primary" type="button" onclick="closeSettings()">Back to app</button>
+      <button class="primary" type="button" data-action="close-settings">Back to app</button>
     </div>
 
     <label for="theme-select">Theme</label>
@@ -66,21 +73,34 @@
   <!-- ── Left: table list ─────────────────────────────────────────── -->
   <div class="col" id="col-left">
     <div class="sidebar-header">
-      <h2>Tables</h2>
+      <div class="sidebar-header-row">
+        <h2>Tables</h2>
+        <button type="button" class="icon-button" data-action="toggle-sidebar" aria-label="Toggle tables sidebar">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15 6l-6 6 6 6" />
+          </svg>
+        </button>
+      </div>
     </div>
 
     <div class="sidebar-utility">
-      <button class="primary new-table-button" type="button" onclick="panelNew()">+ New Table</button>
+      <button class="primary new-table-button" type="button" data-action="new-table">+ New Table</button>
 
       <div class="import-panel">
         <label class="import-label" for="table-import">Import</label>
-        <input id="table-import" type="file" accept=".json" multiple aria-label="Import tables from JSON" onchange="onFilesPicked(this)">
+        <label class="custom-file-button" for="table-import">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 15V4m0 0l-4 4m4-4l4 4M4 16.5V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1.5" />
+          </svg>
+          <span>Import JSON</span>
+        </label>
+        <input id="table-import" class="sr-only" type="file" accept=".json" multiple aria-label="Import tables from JSON">
         <div id="import-status" class="status" role="status" aria-live="polite"></div>
       </div>
 
       <div class="sidebar-controls">
         <label for="table-search" class="sr-only">Search tables</label>
-        <input type="text" id="table-search" class="table-search" placeholder="Search tables…" aria-label="Search tables" oninput="renderTableList()">
+        <input type="text" id="table-search" class="table-search" placeholder="Search tables…" aria-label="Search tables">
         <button type="button" id="table-sort-toggle" class="mini-button" data-action="toggle-sort">Sort: A→Z</button>
       </div>
     </div>
@@ -94,8 +114,8 @@
 
     <!-- Tab bar -->
     <div class="tab-bar" aria-label="Table views">
-      <button id="tab-btn-roll" class="active" type="button" onclick="switchTab('roll')">Roll</button>
-      <button id="tab-btn-edit" type="button" onclick="switchTab('edit')">Edit</button>
+      <button id="tab-btn-roll" class="active" type="button" data-action="switch-tab" data-tab="roll">Roll</button>
+      <button id="tab-btn-edit" type="button" data-action="switch-tab" data-tab="edit">Edit</button>
     </div>
 
     <!-- Roll pane -->
@@ -107,7 +127,7 @@
           <p id="roll-desc"></p>
           <div id="roll-tags" class="entry-tags" style="margin-top:6px;"></div>
         </div>
-        <button class="roll" type="button" onclick="roll()">Roll</button>
+        <button class="roll" type="button" data-action="roll-table">Roll</button>
         <div id="roll-results"></div>
       </div>
     </div>
@@ -124,48 +144,54 @@
       <label for="p-category">Category</label>
       <input type="text" id="p-category" placeholder="Optional: Adventure, Foes, NPCs…">
       <label for="tag-input">Tags</label>
-      <div class="tag-input-row" id="tag-input-row" onclick="document.getElementById('tag-input').focus()">
+      <div class="tag-input-row" id="tag-input-row" data-action="focus-tag-input">
         <div id="tag-chips"></div>
         <input type="text" id="tag-input" placeholder="Type a tag, press Enter or comma" aria-label="Add tags">
       </div>
       <label for="p-filename">Filename <span class="inline-note">(auto-generated from title)</span></label>
       <input type="text" id="p-filename" placeholder="my-table.json"
-             aria-label="Filename"
-             oninput="filenameManuallyEdited=true"
-             >
-      <div id="p-items"></div>
-      <button type="button" onclick="addItemCard('p-items')">+ Add item</button>
+             aria-label="Filename">
+      <div class="items-section">
+        <div class="items-header">
+          <h3>Items</h3>
+          <button type="button" class="mini-button" data-action="add-item-card">+ Add item</button>
+        </div>
+        <div id="p-items" class="items-list"></div>
+      </div>
       <div class="panel-actions">
-        <button class="primary" type="button" onclick="panelSave()">Save</button>
-        <button type="button" onclick="panelExport()">Export</button>
+        <button class="primary" type="button" data-action="save-panel">Save</button>
+        <button type="button" data-action="export-panel">Export</button>
       </div>
       <div id="panel-status" class="status" role="status" aria-live="polite"></div>
-      <details id="json-import">
-        <summary>Import from JSON</summary>
-        <textarea id="json-import-text" class="mono json-import-textarea" rows="8"
-                  placeholder='Paste table JSON here…'></textarea>
-        <div class="json-import-actions">
-          <button class="primary" type="button" onclick="importFromEditPane()">Load into form</button>
-          <button type="button" onclick="document.getElementById('json-import-text').value=''">Clear</button>
+      <div class="json-section">
+        <div class="json-section-header">
+          <h3>JSON</h3>
         </div>
-        <div id="json-import-status" class="status" role="status" aria-live="polite"></div>
-      </details>
+        <details id="json-import">
+          <summary>Import from JSON</summary>
+          <textarea id="json-import-text" class="mono json-import-textarea" rows="8"
+                    placeholder='Paste table JSON here…'></textarea>
+        <div class="json-import-actions">
+          <button class="primary" type="button" data-action="import-from-edit">Load into form</button>
+          <button type="button" data-action="clear-import-text">Clear</button>
+        </div>
+          <div id="json-import-status" class="status" role="status" aria-live="polite"></div>
+        </details>
+
+        <details id="json-preview-panel" class="json-preview-panel">
+          <summary>JSON Preview</summary>
+          <div class="preview-content">
+            <div id="preview-actions">
+              <button type="button" data-action="copy-preview">Copy</button>
+              <button type="button" data-action="export-preview">Export</button>
+            </div>
+            <pre id="preview-body"><code id="preview-code"></code></pre>
+          </div>
+        </details>
+      </div>
     </div>
 
   </div>
-
-  <!-- ── Right: JSON preview (collapsible) ────────────────────────── -->
-  <aside class="col" id="col-right">
-    <div id="preview-header">
-      <h2 id="preview-title">JSON Preview</h2>
-      <div id="preview-actions">
-        <button type="button" data-action="copy-preview">Copy</button>
-        <button type="button" data-action="export-preview">Export</button>
-      </div>
-      <button id="preview-toggle" type="button" data-action="toggle-preview" title="Collapse / expand preview" aria-label="Toggle JSON preview">›</button>
-    </div>
-    <pre id="preview-body"><code id="preview-code"></code></pre>
-  </aside>
 </div>
 
 <script src="js/state.js"></script>

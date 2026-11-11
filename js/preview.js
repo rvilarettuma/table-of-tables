@@ -11,8 +11,9 @@ function _refreshPreview() {
 }
 
 function togglePreview() {
-  const collapsed = document.getElementById('layout').classList.toggle('preview-collapsed');
-  document.getElementById('preview-toggle').textContent = collapsed ? '‹' : '›';
+  const panel = document.getElementById('json-preview-panel');
+  if (!panel) return;
+  panel.open = !panel.open;
 }
 
 function copyPreview(btn) {
