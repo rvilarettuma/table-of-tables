@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabularium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;400i;700;700i&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+<header id="topbar">
+  <div class="topbar-left">
+    <button type="button" class="icon-button mobile-sidebar-toggle" data-action="toggle-sidebar" aria-label="Toggle tables sidebar">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </svg>
+    </button>
+    <span id="app-title">Tabularium</span>
+  </div>
+  <div>
+    <button id="theme-toggle" type="button" data-action="toggle-theme" title="Toggle dark / light" aria-label="Toggle dark mode"></button>
+    <button type="button" data-action="open-settings">Settings</button>
+  </div>
+</header>
+
+<section id="settings-page" class="settings-page" hidden aria-labelledby="settings-title">
+  <div class="settings-page-inner">
+    <div class="settings-header">
+      <div>
+        <p class="eyebrow">Preferences</p>
+        <h2 id="settings-title">Settings</h2>
+      </div>
+      <button class="primary" type="button" data-action="close-settings">Back to app</button>
+    </div>
+
+    <label for="theme-select">Theme</label>
+    <div class="theme-picker">
+      <select id="theme-select" aria-label="Choose a theme">
+        <option value="system">System</option>
+        <option value="tabularium-light">Tabularium Light</option>
+        <option value="tabularium-dark">Tabularium Dark</option>
+        <option value="solarized-light">Solarized Light</option>
+        <option value="solarized-dark">Solarized Dark</option>
+        <option value="verdant-light">Verdant Light</option>
+        <option value="verdant-dark">Verdant Dark</option>
+      </select>
+      <div class="theme-preview" aria-live="polite">
+        <div class="theme-roll-example">
+          <div id="roll-header">
+            <h3>Example Table</h3>
+            <p>Example description</p>
+            <div class="entry-tags">
+              <span class="entry-tag">tag1</span>
+              <span class="entry-tag">tag2</span>
+            </div>
+          </div>
+          <div class="roll-result-item">
+            <div class="roll-subject">Subject</div>
+            <div class="roll-value">Option</div>
+            <div class="roll-sub">Suboption</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="layout">
+
+  <!-- ── Left: table list ─────────────────────────────────────────── -->
+  <div class="col" id="col-left">
+    <div class="sidebar-header">
+      <div class="sidebar-header-row">
+        <h2>Tables</h2>
+        <button type="button" class="icon-button" data-action="toggle-sidebar" aria-label="Toggle tables sidebar">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15 6l-6 6 6 6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="sidebar-utility">
+      <button class="primary new-table-button" type="button" data-action="new-table">+ New Table</button>
+
+      <div class="import-panel">
+        <label class="import-label" for="table-import">Import</label>
+        <label class="custom-file-button" for="table-import">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 15V4m0 0l-4 4m4-4l4 4M4 16.5V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1.5" />
+          </svg>
+          <span>Import JSON</span>
+        </label>
+        <input id="table-import" class="sr-only" type="file" accept=".json" multiple aria-label="Import tables from JSON">
+        <div id="import-status" class="status" role="status" aria-live="polite"></div>
+      </div>
+
+      <div class="sidebar-controls">
+        <label for="table-search" class="sr-only">Search tables</label>
+        <input type="text" id="table-search" class="table-search" placeholder="Search tables…" aria-label="Search tables">
+        <button type="button" id="table-sort-toggle" class="mini-button" data-action="toggle-sort">Sort: A→Z</button>
+      </div>
+    </div>
+
+    <div id="table-list"></div>
+    <p id="table-list-empty" class="muted">No tables loaded.</p>
+  </div>
+
+  <!-- ── Main: tabbed roll / edit ─────────────────────────────────── -->
+  <div class="col" id="col-main">
+
+    <!-- Tab bar -->
+    <div class="tab-bar" aria-label="Table views">
+      <button id="tab-btn-roll" class="active" type="button" data-action="switch-tab" data-tab="roll">Roll</button>
+      <button id="tab-btn-edit" type="button" data-action="switch-tab" data-tab="edit">Edit</button>
+    </div>
+
+    <!-- Roll pane -->
+    <div id="tab-roll" class="tab-pane active">
+      <div id="roll-prompt" class="muted">Select a table from the left to begin.</div>
+      <div id="roll-area" style="display:none">
+        <div id="roll-header">
+          <h3 id="roll-title"></h3>
+          <p id="roll-desc"></p>
+          <div id="roll-tags" class="entry-tags" style="margin-top:6px;"></div>
+        </div>
+        <button class="roll" type="button" data-action="roll-table">Roll</button>
+        <div id="roll-results"></div>
+      </div>
+    </div>
+
+    <!-- Edit pane -->
+    <div id="tab-edit" class="tab-pane">
+      <div class="edit-pane-header">
+        <h2 id="panel-heading">New Table</h2>
+      </div>
+      <label for="p-title">Title</label>
+      <input type="text" id="p-title" placeholder="e.g. Legendary Artifact">
+      <label for="p-desc">Description</label>
+      <input type="text" id="p-desc" placeholder="Optional">
+      <label for="p-category">Category</label>
+      <input type="text" id="p-category" placeholder="Optional: Adventure, Foes, NPCs…">
+      <label for="tag-input">Tags</label>
+      <div class="tag-input-row" id="tag-input-row" data-action="focus-tag-input">
+        <div id="tag-chips"></div>
+        <input type="text" id="tag-input" placeholder="Type a tag, press Enter or comma" aria-label="Add tags">
+      </div>
+      <label for="p-filename">Filename <span class="inline-note">(auto-generated from title)</span></label>
+      <input type="text" id="p-filename" placeholder="my-table.json"
+             aria-label="Filename">
+      <div class="items-section">
+        <div class="items-header">
+          <h3>Items</h3>
+          <button type="button" class="mini-button" data-action="add-item-card">+ Add item</button>
+        </div>
+        <div id="p-items" class="items-list"></div>
+      </div>
+      <div class="panel-actions">
+        <button class="primary" type="button" data-action="save-panel">Save</button>
+        <button type="button" data-action="export-panel">Export</button>
+      </div>
+      <div id="panel-status" class="status" role="status" aria-live="polite"></div>
+      <div class="json-section">
+        <div class="json-section-header">
+          <h3>JSON</h3>
+        </div>
+        <details id="json-import">
+          <summary>Import from JSON</summary>
+          <textarea id="json-import-text" class="mono json-import-textarea" rows="8"
+                    placeholder='Paste table JSON here…'></textarea>
+        <div class="json-import-actions">
+          <button class="primary" type="button" data-action="import-from-edit">Load into form</button>
+          <button type="button" data-action="clear-import-text">Clear</button>
+        </div>
+          <div id="json-import-status" class="status" role="status" aria-live="polite"></div>
+        </details>
+
+        <details id="json-preview-panel" class="json-preview-panel">
+          <summary>JSON Preview</summary>
+          <div class="preview-content">
+            <div id="preview-actions">
+              <button type="button" data-action="copy-preview">Copy</button>
+              <button type="button" data-action="export-preview">Export</button>
+            </div>
+            <pre id="preview-body"><code id="preview-code"></code></pre>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/state.js"></script>
+<script src="js/form.js"></script>
+<script src="js/importer.js"></script>
+<script src="js/roller.js"></script>
+<script src="js/panel.js"></script>
+<script src="js/preview.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
